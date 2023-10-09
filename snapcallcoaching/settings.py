@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-tomkelly111-snap-call-co-643sk014w2.us2.codeanyapp.com', 'snapcallcoaching.herokuapp.com']
+    '8000-tomkelly111-snap-call-co-643sk014w2.us2.codeanyapp.com', 'snapcallcoaching.herokuapp.com', 'snapcallcoaching-146b3f7fc4be.herokuapp.com']
 
 
 # Application definition
