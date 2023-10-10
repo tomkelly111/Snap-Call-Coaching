@@ -1,8 +1,43 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block content %}
-<div class="row">
-    <h1>Test content</h1>
-</div>
+{% extends "base.html" %} {% load static %} {% block content %}
+<main class="background-image">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-10 offset-1 col-sm-8 offset-sm-2">
+        <h1>Welcome to Snap Call Coaching</h1>
+        <p>
+          Your one stop shop for all your poker needs, whether you are a
+          seasoned pro or complete novice.
+        </p>
+      </div>
+    </div>
+    <div class="row main-section">
+      <div class="col-10 offset-1 col-md-6 offset-md-0 col-lg-8">
+        <span class="border border-dark">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          vehicula metus auctor, vulputate sapien eget, tincidunt dui. Vivamus
+          bibendum odio non leo vulputate, id gravida lorem efficitur. Fusce in
+          metus sit amet justo semper euismod. Ut at orci sed arcu tincidunt
+          varius id sit amet ex. Integer venenatis lacinia dolor id aliquet.
+          Morbi quis metus quam. Aenean id odio a metus finibus hendrerit vel id
+          ex.
+        </span>
+      </div>
+      <div class="col-10 offset-1 col-md-6 offset-md-0 col-lg-4">
+        <div class="d-flex justify-content-center">
+            <div class="rounded-circle border border-dark p-4">
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                    vehicula metus auctor, vulputate sapien eget, tincidunt dui.
+                </p>
+            </div>
+        <!-- <div class="border border-dark rounded-circle">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+            vehicula metus auctor, vulputate sapien eget, tincidunt dui.
+          </p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</main>
 {% endblock %}
