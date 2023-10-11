@@ -8,3 +8,25 @@ html {
     background-size: cover;
     height: 100vh;
 }
+
+.callout {
+    padding: 25px;
+    text-align: center;
+}
+
+.circle-text {
+    width: 350px;
+    height: 350px;
+    border: 5px solid red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/media/aces.jpg') center/cover;
+}
+
+.newsletter-text {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
