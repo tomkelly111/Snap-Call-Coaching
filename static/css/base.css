@@ -10,11 +10,12 @@ html {
 } */
 
 .callout {
-    padding: 25px;
+    padding: 50px;
     text-align: center;
     color: white;
     background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url('/media/playing-cards.jpg') no-repeat center center;
     min-height: 200px;
+    max-height: 300px;
 }
 
 .circle-text {
@@ -62,5 +63,12 @@ html {
         background: url('/media/aces.jpg') center/cover;
         margin-top: 20px;
         margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 330px) {
+    .callout-paragraph {
+        display: none;
     }
 }
