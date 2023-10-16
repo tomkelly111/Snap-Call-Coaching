@@ -12,7 +12,13 @@
         <h5 class="card-title">{{ course.name }}</h5>
         <p class="card-text">{{ course.description }}</p>
         <p class="card-text">{{ course.content }}</p>
-        <p class="card-text">{{ course.price }}</p>
+        <p class="card-text">€{{ course.price }}</p>
+        <p class="card-text">Coaches on this course include:</p>
+        <ul>
+          {% for coach in course.coach_set.all %}
+          <li>{{ coach.name }}</li>
+          {% endfor %}
+        </ul>
         <a class="btn btn-outline-secondary btn-sm" href="" role="button"
           >Read reviews...</a
         >
