@@ -1,3 +1,25 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-<p>Testing 123</p>
+{% extends "base.html" %} {% load static %}
+<!-- block tags -->
+{% block content %}
+
+<!-- block tags -->
+<div class="row">
+  {% for course in courses %}
+  <div class="col-md-6 col-lg-4 p-3">
+    <div class="card h-100">
+      <img class="card-img-top" src="/media/aces.jpg" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">{{ course.name }}</h5>
+        <p class="card-text">{{ course.description }}</p>
+        <p class="card-text">{{ course.content }}</p>
+        <p class="card-text">{{ course.price }}</p>
+        <a class="btn btn-outline-secondary btn-sm" href="" role="button"
+          >Read reviews...</a
+        >
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<!-- endblock tags -->
 {% endblock %}
