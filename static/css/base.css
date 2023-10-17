@@ -19,8 +19,8 @@ html {
 }
 
 .circle-text {
-    width: 300px;
-    height: 300px;
+    width: 370px;
+    height: 370px;
     border: 5px solid red;
     border-radius: 50%;
     display: flex;
@@ -51,10 +51,30 @@ html {
     padding: 10px;
 }
 
+.center-button {
+    align-items: center;
+    justify-content: center;
+    margin-left: 33%;
+}
+
+.poker-tips {
+    padding: 15px;
+}
+
+.signup-text {
+    padding: 15px;
+}
+
 @media (max-width: 450px) {
+
+    .poker-tips {
+        display: none;
+    }
+
     .circle-text {
-        width: 250px;
-        height: 250px;
+        font-size: smaller;
+        width: 300px;
+        height: 300px;
         border: 5px solid red;
         border-radius: 50%;
         display: flex;
@@ -65,6 +85,8 @@ html {
         margin-bottom: 10px;
     }
 }
+
+
 
 
 @media (max-width: 330px) {
