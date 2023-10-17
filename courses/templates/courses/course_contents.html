@@ -19,8 +19,12 @@
           <li>{{ coach.name }}</li>
           {% endfor %}
         </ul>
-        <a class="btn btn-outline-secondary btn-sm" href="" role="button"
-          >Read reviews...</a
+        <a
+          class="btn btn-outline-secondary btn-sm"
+          href="{% url 'course_detail' %}"
+          role="button"
+          >Read more...</a
+        >
         >
       </div>
     </div>

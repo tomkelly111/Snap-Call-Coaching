@@ -12,3 +12,9 @@ def course_contents(request):
         'courses': courses
     }
     return render(request, 'courses/course_contents.html', context)
+
+
+def course_detail(request):
+    """a view to return course detail page"""
+
+    return render(request, 'courses/course_detail.html')
