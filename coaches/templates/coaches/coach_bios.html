@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% load static %}
+<!-- block tags -->
+{% block content %}
+
+<!-- block tags -->
+<div class="row">
+  {% for coach in coaches %}
+  <div class="col-md-6 col-lg-4 p-3">
+    <div class="card h-100">
+      <img class="card-img-top" src="/media/aces.jpg" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">{{ coach.name }}</h5>
+        <p class="card-text">{{ coach.biography }}</p>
+        <p class="card-text">{{ coach.accolades }}</p>
+        <p class="card-text">{{ course.courses }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<!-- endblock tags -->
+{% endblock %}
