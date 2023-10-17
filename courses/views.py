@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Course, Coach
 
 # Create your views here.
@@ -14,7 +14,11 @@ def course_contents(request):
     return render(request, 'courses/course_contents.html', context)
 
 
-def course_detail(request):
+def course_detail(request, course):
     """a view to return course detail page"""
-
-    return render(request, 'courses/course_detail.html')
+    queryset = Course.objects
+    detail = get_object_or_404(queryset, name=course)
+    context = {
+        'course': detail
+    }
+    return render(request, 'courses/course_detail.html', context)
