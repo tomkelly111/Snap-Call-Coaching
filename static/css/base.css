@@ -1,14 +1,12 @@
-html {
-    height: 100%
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand&family=Roboto+Condensed&display=swap');
+
+
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-/* .background-image {
-    background: url('/media/Background-poker-cards.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-} */
-
+/* base.html styling  */
 .callout {
     padding: 50px;
     text-align: center;
@@ -18,10 +16,18 @@ html {
     max-height: 300px;
 }
 
+/* Media queries */
+@media (max-width: 330px) {
+    .callout-paragraph {
+        display: none;
+    }
+}
+
+/* index.html styling */
 .circle-text {
     width: 370px;
     height: 370px;
-    border: 5px solid red;
+    border: 3px solid red;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -35,7 +41,7 @@ html {
     width: 90%;
     min-height: 350px;
     padding: 5%;
-    border: 5px solid red;
+    border: 3px solid red;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -65,6 +71,8 @@ html {
     padding: 15px;
 }
 
+/* Media queries */
+
 @media (max-width: 450px) {
 
     .poker-tips {
@@ -86,11 +94,56 @@ html {
     }
 }
 
+@media (max-width: 295px) {
 
-
-
-@media (max-width: 330px) {
-    .callout-paragraph {
-        display: none;
+    .circle-text {
+        font-size: smaller;
+        width: 250px;
+        height: 250px;
+        border: 5px solid red;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url('/media/aces.jpg') center/cover;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
+}
+
+
+/* Footer styling */
+footer {
+    background-color: red;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url('/media/playing-cards-footer.jpg') no-repeat center center;
+}
+
+.privacy-policy {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.footer-icon {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+
+}
+
+.footer-icon:hover {
+    color: black;
+    text-decoration: none;
 }
