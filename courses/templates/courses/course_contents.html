@@ -3,8 +3,9 @@
 {% block content %}
 
 <!-- block tags -->
+
+{% for course in courses %}
 <div class="row">
-  {% for course in courses %}
   <div class="col-md-6 col-lg-4 p-3">
     <div class="card h-100">
       <img class="card-img-top" src="/media/aces.jpg" alt="" />
@@ -29,7 +30,8 @@
       </div>
     </div>
   </div>
-  {% endfor %}
 </div>
+{% endfor %}
+
 <!-- endblock tags -->
 {% endblock %}
