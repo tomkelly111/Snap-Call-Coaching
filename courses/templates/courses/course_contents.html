@@ -6,14 +6,26 @@
 
 {% for course in courses %}
 <div class="container-fluid">
-  <div class="row">
+  <div class="row m-2 m-sm-0 my-sm-3">
     <div class="col-0 col-md-2"></div>
-    <div class="col-0 col-md-8">
-      <div class="rectangle-text mx-auto">
+    <div class="col-0 col-sm-8 image-container">
+      {% if "placeholder" in course.featured_image.url %}
+      <img src="{{ MEDIA_URL }}poker-table.jpg" alt="Poker Course Image" />
+      {% else %}
+      <img src=" {{ course.featured_image.url }}" alt="Poker Course Image" />
+      {% endif %}
+      <div class="overlay m-3">
+        <h1 class="font-weight-bold">{{ course.name }}</h1>
+        <p class="font-weight-light">{{ course.description }}</p>
+        <a class="btn btn-primary" href="#" role="button"
+          >Purchase now for €{{ course.price }}</a
+        >
+      </div>
+      <!-- <div class="rectangle-text mx-auto">
         {% if "placeholder" in course.featured_image.url %}
         <img
-          class="card-img-top"
-          style="min-height: 300px; max-height: 30vh; object-fit: cover"
+          class=""
+          style="max-height: 30vh; object-fit: cover"
           src="{{ MEDIA_URL }}poker-table.jpg"
           alt="Poker table image"
         />
@@ -31,7 +43,7 @@
           ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula
           metus auctor, vulputate sapien eget, tincidunt dui.
         </p>
-      </div>
+      </div> -->
     </div>
     <div class="col-0 col-md-2"></div>
     <!-- <div class="col-md-6 col-lg-4 p-3">

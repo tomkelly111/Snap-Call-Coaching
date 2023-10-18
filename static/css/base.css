@@ -113,6 +113,43 @@ body {
     }
 }
 
+/* Course_contents styling */
+.image-container {
+    width: 100%;
+    max-width: 800px;
+    height: 75vh;
+    margin: 0 auto;
+
+
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    margin: 10px 0;
+
+}
+
+/* Media queries */
+
+@media (max-width: 350px) {
+
+    .overlay h1,
+    .overlay p {
+        font-size: smaller
+    }
+}
+
 
 /* Footer styling */
 footer {
