@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand&family=Roboto+Condensed&display=swap');
 
 
 body {
     height: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    background-color: #FFF6F2;
 }
 
 /* base.html styling  */
