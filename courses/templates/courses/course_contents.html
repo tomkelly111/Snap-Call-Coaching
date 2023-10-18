@@ -5,8 +5,36 @@
 <!-- block tags -->
 
 {% for course in courses %}
-<div class="row">
-  <div class="col-md-6 col-lg-4 p-3">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-0 col-md-2"></div>
+    <div class="col-0 col-md-8">
+      <div class="rectangle-text mx-auto">
+        {% if "placeholder" in course.featured_image.url %}
+        <img
+          class="card-img-top"
+          style="min-height: 300px; max-height: 30vh; object-fit: cover"
+          src="{{ MEDIA_URL }}poker-table.jpg"
+          alt="Poker table image"
+        />
+        {% else %}
+        <img
+          class="card-img-top"
+          style="min-height: 300px; max-height: 30vh; object-fit: cover"
+          src=" {{ post.featured_image.url }}"
+          alt="Coffee Shop Picture"
+        />
+        {% endif %}
+        <p class="newsletter-text font-weight-bold">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          vehicula metus auctor, vulputate sapien eget, tincidunt dui. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula
+          metus auctor, vulputate sapien eget, tincidunt dui.
+        </p>
+      </div>
+    </div>
+    <div class="col-0 col-md-2"></div>
+    <!-- <div class="col-md-6 col-lg-4 p-3">
     <div class="card h-100">
       <img class="card-img-top" src="/media/aces.jpg" alt="" />
       <div class="card-body">
@@ -29,6 +57,7 @@
         >
       </div>
     </div>
+  </div> -->
   </div>
 </div>
 {% endfor %}

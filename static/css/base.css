@@ -50,9 +50,10 @@ body {
     background: url('/media/aces.jpg') center/cover;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: white;
 }
 
-.newsletter-text {
+.box-text {
     color: white;
     text-align: center;
     padding: 10px;
