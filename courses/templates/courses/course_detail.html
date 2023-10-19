@@ -1,21 +1,20 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-<div class="row">
-  <div class="col-md-6 col-lg-4 p-3">
-    <div class="card h-100">
-      <img class="card-img-top" src="/media/aces.jpg" alt="" />
-      <div class="card-body">
-        <h5 class="card-title">{{ course.name }}</h5>
-        <p class="card-text">{{ course.description }}</p>
-        <p class="card-text">{{ course.content }}</p>
-        <p class="card-text">€{{ course.price }}</p>
-        <p class="card-text">Coaches on this course include:</p>
-        <ul>
-          {% for coach in course.coach_set.all %}
-          <li>{{ coach.name }}</li>
-          {% endfor %}
-        </ul>
+<div class="course-detail container-fluid">
+  <div class="row m-2 m-sm-0 my-sm-3">
+    <div class="col-0 col-md-2"></div>
+    <div class="col-0 col-sm-8">
+      <div class="m-3">
+        <h1 class="font-weight-bold">{{ course.name }}</h1>
+        <hr />
+        <h2 class="font-weight-light">{{ course.description }}</h2>
+        <hr />
+        <p class="font-weight-light">{{ course.content | safe }}</p>
+        <a class="btn btn-warning m-1" href="#" role="button"
+          >Purchase now for €{{ course.price }}</a
+        >
       </div>
     </div>
+    <div class="col-0 col-md-2"></div>
   </div>
 </div>
 

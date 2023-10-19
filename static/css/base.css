@@ -156,6 +156,15 @@ body {
     }
 }
 
+/* Course_detail.html styling */
+.course-detail {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/media/playing-cards-background.jpg');
+}
+
+.course-detail hr {
+    background-color: #fff;
+}
 
 /* Footer styling */
 footer {
