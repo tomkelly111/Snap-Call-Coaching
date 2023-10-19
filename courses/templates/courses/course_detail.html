@@ -9,6 +9,12 @@
         <h2 class="font-weight-light">{{ course.description }}</h2>
         <hr />
         <p class="font-weight-light">{{ course.content | safe }}</p>
+        <p>Course Coaches:</p>
+        <ul>
+          {% for coach in course.coach_set.all %}
+          <li><a href="#">{{ coach.name }}</a></li>
+          {% endfor %}
+        </ul>
         <a class="btn btn-warning m-1" href="#" role="button"
           >Purchase now for €{{ course.price }}</a
         >
