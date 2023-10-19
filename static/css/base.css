@@ -115,9 +115,10 @@ body {
 
 /* Course_contents styling */
 .image-container {
-    width: 100%;
+    width: 100vh;
     min-width: 270px;
     max-width: 60vw;
+    max-height: 70vw;
     height: 60vh;
     margin: 0 auto;
 
@@ -149,25 +150,9 @@ body {
         font-size: small
     }
 
-    .image-container {
-        width: 100%;
-        min-width: 270px;
-        height: 40vh;
-        margin: 0 auto;
-    }
-
 }
 
-@media (max-width: 390px) {
-
-    .image-container {
-        width: 100%;
-        min-width: 270px;
-        height: 40vh;
-        margin: 0 auto;
-
-
-    }
+@media (max-width: 390px) {}
 }
 
 
