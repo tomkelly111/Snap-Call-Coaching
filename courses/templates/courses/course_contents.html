@@ -17,59 +17,18 @@
       <div class="overlay m-3">
         <h1 class="font-weight-bold">{{ course.name }}</h1>
         <p class="font-weight-light">{{ course.description }}</p>
-        <a class="btn btn-primary" href="#" role="button"
+        <a
+          class="btn btn-primary m-1"
+          href="{% url 'course_detail' course=course.name %}"
+          role="button"
+          >View Course Contents</a
+        >
+        <a class="btn btn-warning m-1" href="#" role="button"
           >Purchase now for €{{ course.price }}</a
         >
       </div>
-      <!-- <div class="rectangle-text mx-auto">
-        {% if "placeholder" in course.featured_image.url %}
-        <img
-          class=""
-          style="max-height: 30vh; object-fit: cover"
-          src="{{ MEDIA_URL }}poker-table.jpg"
-          alt="Poker table image"
-        />
-        {% else %}
-        <img
-          class="card-img-top"
-          style="min-height: 300px; max-height: 30vh; object-fit: cover"
-          src=" {{ post.featured_image.url }}"
-          alt="Coffee Shop Picture"
-        />
-        {% endif %}
-        <p class="newsletter-text font-weight-bold">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          vehicula metus auctor, vulputate sapien eget, tincidunt dui. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula
-          metus auctor, vulputate sapien eget, tincidunt dui.
-        </p>
-      </div> -->
     </div>
     <div class="col-0 col-md-2"></div>
-    <!-- <div class="col-md-6 col-lg-4 p-3">
-    <div class="card h-100">
-      <img class="card-img-top" src="/media/aces.jpg" alt="" />
-      <div class="card-body">
-        <h5 class="card-title">{{ course.name }}</h5>
-        <p class="card-text">{{ course.description }}</p>
-        <p class="card-text">{{ course.content }}</p>
-        <p class="card-text">€{{ course.price }}</p>
-        <p class="card-text">Coaches on this course include:</p>
-        <ul>
-          {% for coach in course.coach_set.all %}
-          <li>{{ coach.name }}</li>
-          {% endfor %}
-        </ul>
-        <a
-          class="btn btn-outline-secondary btn-sm"
-          href="{% url 'course_detail' course=course.name %}"
-          role="button"
-          >Read more...</a
-        >
-        >
-      </div>
-    </div>
-  </div> -->
   </div>
 </div>
 {% endfor %}
