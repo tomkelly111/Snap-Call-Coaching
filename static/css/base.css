@@ -116,8 +116,9 @@ body {
 /* Course_contents styling */
 .image-container {
     width: 100%;
-    max-width: 800px;
-    height: 75vh;
+    min-width: 270px;
+    max-width: 60vw;
+    height: 60vh;
     margin: 0 auto;
 
 
@@ -141,12 +142,31 @@ body {
 }
 
 /* Media queries */
-
-@media (max-width: 350px) {
+@media (max-width: 600px) {
 
     .overlay h1,
     .overlay p {
-        font-size: smaller
+        font-size: small
+    }
+
+    .image-container {
+        width: 100%;
+        min-width: 270px;
+        height: 40vh;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 390px) {
+
+    .image-container {
+        width: 100%;
+        min-width: 270px;
+        height: 40vh;
+        margin: 0 auto;
+
+
     }
 }
 
