@@ -176,6 +176,31 @@ body {
     color: blue;
 }
 
+.remove-item {
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    font-size: 1.5em;
+    height: 1em;
+    width: 1em;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 100%;
+    color: red;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+}
+
+.remove-item:hover {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+}
+
 /* Footer styling */
 footer {
     background-color: red;

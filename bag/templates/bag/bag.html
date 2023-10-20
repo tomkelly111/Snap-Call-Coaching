@@ -29,7 +29,18 @@
                   <p class="my-0">${{ item.course.price }}</p>
                 </td>
                 <td class="py-3 w-25"></td>
-                <td class="py-3"></td>
+                <td class="py-3">
+                  <form
+                    class="remove-item-form"
+                    method="POST"
+                    action="{% url 'remove_from_bag' item.course_id %}"
+                  >
+                    {% csrf_token %}
+                    <a class="remove-item" id="remove_{{ item.course_id }}"
+                      ><small>X</small></a
+                    >
+                  </form>
+                </td>
               </tr>
               {% endfor %}
               <tr>
@@ -76,7 +87,20 @@
         <div class="col-0 col-md-2"></div>
       </div>
     </div>
-
-    {% endblock %}
   </div>
 </div>
+{% endblock %} {% block postloadjs %} {{ block.super}}
+<script type="text/javascript">
+  // Remove item and reload on click
+  $(".remove-item").click(function (e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr("id").split("remove_")[1];
+    var url = `/shopping_cart/remove/${itemId}/`;
+    var data = { csrfmiddlewaretoken: csrfToken };
+
+    $.post(url, data).done(function () {
+      location.reload();
+    });
+  });
+</script>
+{% endblock %}
