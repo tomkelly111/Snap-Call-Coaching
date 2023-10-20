@@ -89,7 +89,10 @@
           {% endif %}
         </ul>
         <span class="navbar-text mr-2">
-          <a class="" href="{% url 'view_bag' %}">
+          <a
+            class="{% if bag_total %}bag-display{% else %}empty-bag{% endif %} nav-link"
+            href="{% url 'view_bag' %}"
+          >
             <i class="fas fa-shopping-bag fa-lg"></i>
           </a>
         </span>
