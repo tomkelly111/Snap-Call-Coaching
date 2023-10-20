@@ -166,6 +166,16 @@ body {
     background-color: #fff;
 }
 
+/* Bag styling */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: blue;
+}
+
 /* Footer styling */
 footer {
     background-color: red;
