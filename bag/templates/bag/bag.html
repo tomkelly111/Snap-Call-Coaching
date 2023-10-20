@@ -2,9 +2,81 @@
 <div class="container-fluid">
   <div class="row m-2 m-sm-0 my-sm-3">
     <div class="col-0 col-md-2"></div>
-    <div class="col-0 col-sm-8">{{ bag_items }}</div>
-    <div class="col-0 col-md-2"></div>
+    <div class="col-0 col-sm-8">
+      <div class="row">
+        <div class="col">
+          {% if bag_items %}
+          <div class="table-responsive rounded">
+            <table class="table table-sm table-borderless">
+              <thead class="text-black">
+                <tr>
+                  <th scope="col">Course</th>
+                  <th scope="col"></th>
+                  <th scope="col">Price</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+
+              {% for item in bag_items %}
+              <tr>
+                <td class="p-3 w-25">
+                  <p class="my-0"><strong>{{ item.course.name }}</strong></p>
+                </td>
+
+                <td class="py-3"></td>
+                <td class="py-3">
+                  <p class="my-0">${{ item.course.price }}</p>
+                </td>
+                <td class="py-3 w-25"></td>
+                <td class="py-3"></td>
+              </tr>
+              {% endfor %}
+              <tr>
+                <td colspan="5" class="pt-5 text-right">
+                  <h6>
+                    <strong>Bag Total: ${{ total|floatformat:2 }}</strong>
+                  </h6>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5" class="text-right">
+                  <a
+                    href="{% url 'course_contents' %}"
+                    class="btn btn-outline-black rounded-0 btn-lg"
+                  >
+                    <span class="icon">
+                      <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to courses</span>
+                  </a>
+                  <a href="" class="btn btn-black rounded-0 btn-lg">
+                    <span class="text-uppercase">Secure Checkout</span>
+                    <span class="icon">
+                      <i class="fas fa-lock"></i>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+          {% else %}
+          <p class="lead mb-5">Your bag is empty.</p>
+          <a
+            href="{% url 'course_contents' %}"
+            class="btn btn-outline-black rounded-0 btn-lg"
+          >
+            <span class="icon">
+              <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">View our courses</span>
+          </a>
+          {% endif %}
+        </div>
+        <div class="col-0 col-md-2"></div>
+      </div>
+    </div>
+
+    {% endblock %}
   </div>
 </div>
-
-{% endblock %}
