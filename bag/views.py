@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
+from django.contrib import messages
+from courses.models import Course
 
 # Create your views here.
 
@@ -11,10 +13,13 @@ def view_bag(request):
 def add_to_bag(request, course_id):
     """ Add a course of the to the shopping bag """
 
+    course = Course.objects.get(pk=course_id)
     quantity = 1
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
     bag[course_id] = quantity
+    messages.success(
+        request, f'The {course.name} course has been added to your cart')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
