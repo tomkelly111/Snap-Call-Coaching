@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.conf import settings
-# from django.contrib import messages
+from django.contrib import messages
 
 from .forms import OrderForm
 from bag.contexts import bag_contents
@@ -53,10 +53,10 @@ def checkout(request):
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {})
-
-        # if not bag:
-        #     messages.error(request, "There's nothing in your bag at the moment")
-        #     return redirect(reverse('products'))
+        if not bag:
+             messages.error(request, "There's nothing in your cart at the moment")
+             return redirect(reverse('course_contents'))
+             
         current_bag = bag_contents(request)
         total = current_bag['total']
         stripe_total = round(total * 100)
@@ -67,9 +67,8 @@ def checkout(request):
         )
 
         order_form = OrderForm()
-    # if not stripe_public_key:
-    #     messages.warning(request, 'Stripe public key is missing. \
-    #         Did you forget to set it in your environment?')
+    if not stripe_public_key:
+        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {
@@ -87,9 +86,7 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    # messages.success(request, f'Order successfully processed! \
-    #     Your order number is {order_number}. A confirmation \
-    #     email will be sent to {order.email}.')
+    messages.success(request, f'Order successfully processed! Your order number is {order_number}. A confirmation email will be sent to {order.email}.')
 
     if 'bag' in request.session:
         del request.session['bag']
