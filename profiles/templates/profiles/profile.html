@@ -28,6 +28,9 @@
             </div>
             <div>
                 <p class="text-muted">You have purchased the follwoing courses:</p>
+                {% for order in orders %}
+                    <a href="{% url 'course_detail' course=order.name %}">{{ order.name }}</a>
+                {% endfor %}
                 {{ orders }}
             </div>
         </div>

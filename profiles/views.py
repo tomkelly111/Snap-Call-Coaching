@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import UserProfile
 from .forms import UserProfileForm
 from django.contrib import messages
+from courses.models import Course
 
 
 def profile(request):
@@ -15,11 +16,21 @@ def profile(request):
             messages.success(request, 'Your billing details have been saved')
 
     form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+    orders = profile.purchased_courses.all()
     template = 'profiles/profile.html'
     context = {
         'form': form,
-        'order': orders,
+        'orders': orders,
     }
 
     return render(request, template, context)
+
+
+def course_detail(request, course):
+    """a view to return course detail page"""
+    queryset = Course.objects
+    detail = get_object_or_404(queryset, name=course)
+    context = {
+        'course': detail
+    }
+    return render(request, 'courses/course_detail.html', context)
