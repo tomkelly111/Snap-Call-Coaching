@@ -60,6 +60,7 @@ def checkout(request):
                         course=course,
                     )
                     order_line_item.save()
+                    request.user.userprofile.purchased_courses.add(course)
                 except Course.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "

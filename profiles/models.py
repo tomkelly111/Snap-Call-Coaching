@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from checkout.models import Course
 
 from django_countries.fields import CountryField
 
@@ -12,6 +13,8 @@ class UserProfile(models.Model):
     billing information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    purchased_courses = models.ManyToManyField(
+        Course, blank=True, related_name='purchased_by')
     default_phone_number = models.CharField(
         max_length=20, null=True, blank=True)
     default_country = CountryField(
