@@ -94,7 +94,7 @@ def checkout(request):
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    'full_name': profile.user.get_full_name(),
+                    'full_name': profile.default_full_name,
                     'email': profile.user.email,
                     'phone_number': profile.default_phone_number,
                     'country': profile.default_country,
@@ -108,7 +108,7 @@ def checkout(request):
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
-            
+
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
 
@@ -143,6 +143,7 @@ def checkout_success(request, order_number):
 
         if save_info:
             profile_data = {
+                'default_full_name': order.full_name,
                 'default_phone_number': order.phone_number,
                 'default_street_address1': order.street_address1,
                 'default_street_address2': order.street_address2,
