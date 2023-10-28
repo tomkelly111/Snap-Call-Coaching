@@ -39,16 +39,12 @@ class StripeWH_Handler:
         billing_details = stripe_charge.billing_details 
         order_total = round(stripe_charge.amount / 100, 2)
 
-        # Clean data in the shipping details
-        # for field, value in billing_details.address.items():
-        #     if value == "":
-        #         billing_details.address[field] = None
-
         # update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
+            
             if save_info:
                 profile.default_full_name = billing_details.name,
                 profile.default_phone_number = billing_details.phone,
@@ -57,6 +53,9 @@ class StripeWH_Handler:
                 profile.default_street_address1 = billing_details.address.line1,
                 profile.default_street_address2 = billing_details.address.line2,
                 profile.default_county = billing_details.address.state,
+                for course_id, quantity in json.loads(bag).items():
+                    course = Course.objects.get(id=course_id)
+                    profile.purchased_courses.add(course)
                 profile.save()
 
 
@@ -68,15 +67,7 @@ class StripeWH_Handler:
                     full_name__iexact=billing_details.name,
                     email__iexact=billing_details.email,
                     phone_number__iexact=billing_details.phone,
-                    country__iexact=billing_details.address.country,
-                    postcode__iexact=billing_details.address.postal_code,
-                    town_or_city__iexact=billing_details.address.city,
-                    street_address1__iexact=billing_details.address.line1,
-                    street_address2__iexact=billing_details.address.line2,
-                    county__iexact=billing_details.address.state,
-                    order_total=order_total,
                     original_bag=bag,
-                    stripe_pid=pid,
                 )
                 order_exists = True
                 break
