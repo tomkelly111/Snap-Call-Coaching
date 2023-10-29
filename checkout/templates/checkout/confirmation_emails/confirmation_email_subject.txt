@@ -1,0 +1,1 @@
+Snap Call Coaching Confirmation of course purchase. Order number: {{ order.order_number }}

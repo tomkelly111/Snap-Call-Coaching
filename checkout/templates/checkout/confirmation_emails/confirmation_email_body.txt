@@ -1,0 +1,11 @@
+Hello {{ order.full_name }},
+
+Thank you for puchasing our course. Your order number is {{ order.order_number }}
+
+You can access the course content via your Snap Call Coaching user profile. If you have not yet created one please do so.
+
+Feel free to contact us should you have any issues and good luck with your studies!
+
+Sincerely,
+
+Snap Call Coaching
