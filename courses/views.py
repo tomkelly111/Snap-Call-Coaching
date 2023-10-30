@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Course
 from .forms import CourseForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -26,6 +27,16 @@ def course_detail(request, course):
 
 def add_course(request):
     """add new courses to site"""
+    if request.method == 'POST':
+        form = CourseForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added new course!')
+            return redirect(reverse('add_course'))
+        else:
+            messages.error(request, 'Failed to add new course, please ensure form is validly completed')
+    else:
+        form = CourseForm()
     form = CourseForm()
     template = 'courses/add_course.html'
     context = {

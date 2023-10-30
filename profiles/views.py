@@ -14,8 +14,11 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your billing details have been saved')
-
-    form = UserProfileForm(instance=profile)
+        else:
+            messages.error(
+                request, 'Update failed, please ensure form is validly completed')
+    else:
+        form = UserProfileForm(instance=profile)
     orders = profile.purchased_courses.all()
     template = 'profiles/profile.html'
     context = {
