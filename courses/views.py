@@ -30,9 +30,9 @@ def add_course(request):
     if request.method == 'POST':
         form = CourseForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            course = form.save()
             messages.success(request, 'Successfully added new course!')
-            return redirect(reverse('add_course'))
+            return redirect(reverse('course_detail', args=[course.name]))
         else:
             messages.error(request, 'Failed to add new course, please ensure form is validly completed')
     else:
@@ -46,7 +46,7 @@ def add_course(request):
 
 
 def edit_course(request, course_id):
-    """ Edit a product in the store """
+    """ Edit a course """
     course = get_object_or_404(Course, pk=course_id)
     if request.method == 'POST':
         form = CourseForm(request.POST, request.FILES, instance=course)
@@ -68,3 +68,11 @@ def edit_course(request, course_id):
     }
 
     return render(request, template, context)
+
+
+def delete_course(request, course_id):
+    """ delete a course """
+    course = get_object_or_404(Course, pk=course_id)
+    course.delete()
+    messages.success(request, 'Successfully deleted course!')
+    return redirect(reverse('course_contents'))

@@ -44,6 +44,12 @@
             value="{% url 'view_bag' %}"
           />
         </form>
+        {% if request.user.is_superuser%}
+        <small class="ml-3">
+            <a class="btn btn-info m-1" href="{% url 'edit_course' course.id %}" role="button">Edit Course</a>
+            <a class="btn btn-danger m-1" href="{% url 'delete_course' course.id %}" role="button">Delete Course</a>
+        </small>
+        {% endif %}
       </div>
     </div>
     <div class="col-12 col-md-2"></div>
