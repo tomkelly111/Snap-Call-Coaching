@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="course-detail container-fluid">
+    <div class="row m-2 m-sm-0 my-sm-3">
+        <div class="col-12 col-md-2"></div>
+        <div class="col-12 col-md-8">
+            <div class="m-3 course-detail text-center">
+                <h2>Courses Management</h2>
+                <hr>
+                <h3>Edit course</h3>
+                <hr>
+            </div>
+        </div>
+        <div class="col-12 col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-2 col-lg-4"></div>
+        <div class="col-12 col-md-8 col-lg-4">
+            <form method="POST" action="{% url 'edit_course' course.id %}" class="form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form |crispy}}
+                <div class="mb-5">
+                    <a class="btn btn-primary m-1" href="{% url 'course_contents' %}" role="button">Cancel</a>
+                    <button class="btn btn-warning m-1" type=""submit>Edit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-md-2 col-lg-4"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

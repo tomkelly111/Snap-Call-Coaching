@@ -6,4 +6,5 @@ urlpatterns = [
     path('course-detail/<str:course>/',
          views.course_detail, name="course_detail"),
     path('add/', views.add_course, name="add_course"),
+    path('edit/<int:course_id>', views.edit_course, name="edit_course"),
 ]
