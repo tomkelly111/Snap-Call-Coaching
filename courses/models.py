@@ -24,6 +24,7 @@ class Testimonials(models.Model):
 
     class Meta:
         verbose_name_plural = "Testimonials"
+        ordering = ['-created_on']
     
 
     def __str__(self):

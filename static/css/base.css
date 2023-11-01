@@ -6,6 +6,7 @@ body {
     font-family: 'Kanit', sans-serif;
     background-color: #FFF6F2;
     margin-bottom: 150px;
+    background: linear-gradient (rgba(255, 246, 242, 0.9), rgba(255, 246, 242, 0.9)), url('/media/playing-cards-background.jpg');
 }
 
 /* base.html styling  */
@@ -13,7 +14,7 @@ body {
     padding: 50px;
     text-align: center;
     color: white;
-    background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url('/media/playing-cards.jpg') no-repeat center center;
+    background: #FF7A78;
     min-height: 200px;
     max-height: 300px;
 }
@@ -30,6 +31,7 @@ body {
     width: 370px;
     height: 370px;
     border-radius: 50%;
+    border: 5px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +43,7 @@ body {
 .rectangle-text {
     width: 90%;
     min-height: 350px;
+    border: 5px solid white;
     padding: 5%;
     display: flex;
     align-items: center;
@@ -146,6 +149,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0.5;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
 .overlay {
@@ -177,10 +181,17 @@ body {
 .course-detail {
     color: #fff;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/media/playing-cards-background.jpg');
+    
 }
 
 .course-detail hr {
     background-color: #fff;
+}
+
+.testimonials {
+    word-wrap: break-word;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* Bag styling */
@@ -227,7 +238,7 @@ footer {
     bottom: 0;
     width: 100%;
     color: white;
-    background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url('/media/playing-cards-footer.jpg') no-repeat center center;
+    background: #FF7A78;
 }
 
 .privacy-policy {

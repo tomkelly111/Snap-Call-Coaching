@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Course, Testimonials
 from django.contrib.auth.decorators import login_required
-from .forms import CourseForm
+from .forms import CourseForm, TestimonialsForm
 from django.contrib import messages
 
 # Create your views here.
@@ -19,15 +19,26 @@ def course_contents(request):
 
 def course_detail(request, course):
     """a view to return course detail page"""
-    detail = get_object_or_404(Course, name=course)
-    testimonials = Testimonials.objects.filter(course=detail)
-    print(detail)  # Check the value of 'detail'
-    for testimonial in testimonials:
-        # Check the values of testimonials
-        print(testimonial.name, testimonial.review, testimonial.created_on)
+    course = get_object_or_404(Course, name=course)
+    testimonials = Testimonials.objects.filter(course=course)
+    if request.method == 'POST':
+        form = TestimonialsForm(request.POST)
+        if form.is_valid():
+            testimonial = form.save(commit=False)
+            testimonial.course = course
+            testimonial.save()
+            messages.success(request, 'Your review is awaiting approval!')
+            return redirect(reverse('course_detail', args=[course.name]))
+        else:
+            messages.error(
+                request, 'Failed to submit. Please ensure the form is valid.')
+    else:
+        form = TestimonialsForm()
+    form = TestimonialsForm()
     context = {
-        'course': detail,
-        'testimonials': testimonials
+        'course': course,
+        'testimonials': testimonials,
+        'form': form,
     }
     return render(request, 'courses/course_detail.html', context)
 
@@ -96,3 +107,4 @@ def delete_course(request, course_id):
     course.delete()
     messages.success(request, 'Successfully deleted course!')
     return redirect(reverse('course_contents'))
+

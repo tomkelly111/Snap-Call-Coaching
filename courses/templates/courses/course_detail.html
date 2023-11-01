@@ -1,14 +1,17 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 <div class="course-detail container-fluid">
   <div class="row m-2 m-sm-0 my-sm-3">
-    <div class="col-12 col-md-2"></div>
-    <div class="col-12 col-sm-8">
+    <div class="col-12 col-lg-2">
+        <form method="POST" class="form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form |crispy}}
+            <div class="mb-5">
+                <button class="btn btn-secondary m-1" type="submit">Post Review</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-12 col-lg-6">
       <div class="m-3">
-        {% for testimonial in testimonials %}
-        <p>{{ testimonial.name }}</p>
-        <p>{{ testimonial.review }}</p>
-        <p>{{ testimonial.created_on }}</p>
-        {% endfor %}
         <h1 class="font-weight-bold">{{ course.name }}</h1>
         <hr />
         <h2 class="font-weight-light">{{ course.description }}</h2>
@@ -57,7 +60,15 @@
         {% endif %}
       </div>
     </div>
-    <div class="col-12 col-md-2"></div>
+    <div class="col-12 col-lg-4">
+        {% for testimonial in testimonials %}
+        <div class="testimonials p-2 m-2 mb-4">
+            <p class="font-italic">{{ testimonial.review }}</p>
+            <p class="font-weight-bold">- {{ testimonial.name }}</p>
+            <p class="text-muted">{{ testimonial.created_on }}</p>
+        </div>
+        {% endfor %}
+    </div>
   </div>
 </div>
 

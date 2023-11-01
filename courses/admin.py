@@ -11,5 +11,5 @@ class CourseAdmin(SummernoteModelAdmin):
 
 @admin.register(Testimonials)
 class testimonialAdmin(admin.ModelAdmin):
-    list_display = ('course', 'name', 'review', 'created_on', 'approved')
+    list_display = ('course', 'name', 'created_on', 'approved')
 
