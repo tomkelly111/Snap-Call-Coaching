@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from .models import Course
+from .models import Course, Testimonials
 from django.contrib.auth.decorators import login_required
 from .forms import CourseForm
 from django.contrib import messages
@@ -19,10 +19,15 @@ def course_contents(request):
 
 def course_detail(request, course):
     """a view to return course detail page"""
-    queryset = Course.objects
-    detail = get_object_or_404(queryset, name=course)
+    detail = get_object_or_404(Course, name=course)
+    testimonials = Testimonials.objects.filter(course=detail)
+    print(detail)  # Check the value of 'detail'
+    for testimonial in testimonials:
+        # Check the values of testimonials
+        print(testimonial.name, testimonial.review, testimonial.created_on)
     context = {
-        'course': detail
+        'course': detail,
+        'testimonials': testimonials
     }
     return render(request, 'courses/course_detail.html', context)
 

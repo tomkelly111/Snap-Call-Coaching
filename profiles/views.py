@@ -30,7 +30,7 @@ def profile(request):
     return render(request, template, context)
 
 
-def course_detail(request, course):
+def course_subscriptions(request, course):
     """a view to return course detail page"""
     queryset = Course.objects
     detail = get_object_or_404(queryset, name=course)

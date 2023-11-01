@@ -4,6 +4,11 @@
     <div class="col-12 col-md-2"></div>
     <div class="col-12 col-sm-8">
       <div class="m-3">
+        {% for testimonial in testimonials %}
+        <p>{{ testimonial.name }}</p>
+        <p>{{ testimonial.review }}</p>
+        <p>{{ testimonial.created_on }}</p>
+        {% endfor %}
         <h1 class="font-weight-bold">{{ course.name }}</h1>
         <hr />
         <h2 class="font-weight-light">{{ course.description }}</h2>
