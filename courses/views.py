@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Course, Testimonials
 from django.contrib.auth.decorators import login_required
 from .forms import CourseForm, TestimonialsForm
+from profiles.models import UserProfile
 from django.contrib import messages
 
 # Create your views here.
@@ -21,24 +22,32 @@ def course_detail(request, course):
     """a view to return course detail page"""
     course = get_object_or_404(Course, name=course)
     testimonials = Testimonials.objects.filter(course=course)
-    if request.method == 'POST':
-        form = TestimonialsForm(request.POST)
-        if form.is_valid():
-            testimonial = form.save(commit=False)
-            testimonial.course = course
-            testimonial.save()
-            messages.success(request, 'Your review is awaiting approval!')
-            return redirect(reverse('course_detail', args=[course.name]))
+    user_profile = UserProfile.objects.get(user=request.user)
+    has_purchased = False
+    if course in user_profile.purchased_courses.all():
+        has_purchased = True
+        if request.method == 'POST':
+            form = TestimonialsForm(request.POST)
+            if form.is_valid():
+                testimonial = form.save(commit=False)
+                testimonial.course = course
+                testimonial.save()
+                messages.success(request, 'Your review is awaiting approval!')
+                return redirect(reverse('course_detail', args=[course.name]))
+            else:
+                messages.error(
+                    request, 'Failed to submit. Please ensure the form is valid.')
         else:
-            messages.error(
-                request, 'Failed to submit. Please ensure the form is valid.')
+            form = TestimonialsForm()
     else:
-        form = TestimonialsForm()
+        messages.error(
+            request, 'You must purchase the course to submit a review.')
     form = TestimonialsForm()
     context = {
         'course': course,
         'testimonials': testimonials,
         'form': form,
+        'has_purchased': has_purchased,
     }
     return render(request, 'courses/course_detail.html', context)
 

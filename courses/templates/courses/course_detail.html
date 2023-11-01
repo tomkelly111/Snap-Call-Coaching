@@ -2,13 +2,15 @@
 <div class="course-detail container-fluid">
   <div class="row m-2 m-sm-0 my-sm-3">
     <div class="col-12 col-lg-2">
-        <form method="POST" class="form" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form |crispy}}
-            <div class="mb-5">
-                <button class="btn btn-secondary m-1" type="submit">Post Review</button>
-            </div>
-        </form>
+        {% if has_purchased %}
+            <form method="POST" class="form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form |crispy}}
+                <div class="mb-5">
+                    <button class="btn btn-secondary m-1" type="submit">Post Review</button>
+                </div>
+            </form>
+        {% endif %}
     </div>
     <div class="col-12 col-lg-6">
       <div class="m-3">
