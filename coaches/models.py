@@ -4,7 +4,8 @@ from courses.models import Course
 
 class Coach(models.Model):
     name = models.CharField(max_length=80)
-    courses = models.ManyToManyField(Course)
+    courses = models.ManyToManyField(
+        Course, blank=True, related_name='coached_courses')
     biography = models.TextField(max_length=500)
     accolades = models.TextField(max_length=500)
 

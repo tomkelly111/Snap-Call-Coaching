@@ -3,6 +3,7 @@ from .models import Course, Testimonials
 from django.contrib.auth.decorators import login_required
 from .forms import CourseForm, TestimonialsForm
 from profiles.models import UserProfile
+from coaches.models import Coach
 from django.contrib import messages
 
 # Create your views here.

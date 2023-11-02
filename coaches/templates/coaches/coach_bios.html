@@ -10,9 +10,11 @@
       <img class="card-img-top" src="/media/aces.jpg" alt="" />
       <div class="card-body">
         <h5 class="card-title">{{ coach.name }}</h5>
-        <p class="card-text">{{ coach.biography }}</p>
-        <p class="card-text">{{ coach.accolades }}</p>
-        <p class="card-text">{{ course.courses }}</p>
+        <p class="card-text">{{ coach.biography| safe }}</p>
+        <p class="card-text">{{ coach.accolades| safe }}</p>
+        {% for course in coach.courses.all %}
+        <li><a href="{% url 'course_detail' course=course.name %}">{{ course.name }}</a></li>
+        {% endfor %}
       </div>
     </div>
   </div>
