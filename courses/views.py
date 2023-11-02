@@ -24,30 +24,33 @@ def course_detail(request, course):
     testimonials = Testimonials.objects.filter(course=course)
     user_profile = UserProfile.objects.get(user=request.user)
     has_purchased = False
+    has_reviewed = False
     if course in user_profile.purchased_courses.all():
         has_purchased = True
-        if request.method == 'POST':
-            form = TestimonialsForm(request.POST)
-            if form.is_valid():
-                testimonial = form.save(commit=False)
-                testimonial.course = course
-                testimonial.save()
-                messages.success(request, 'Your review is awaiting approval!')
-                return redirect(reverse('course_detail', args=[course.name]))
-            else:
-                messages.error(
-                    request, 'Failed to submit. Please ensure the form is valid.')
+        if course in user_profile.reviewed_courses.all():
+            has_reviewed = True
         else:
-            form = TestimonialsForm()
-    else:
-        messages.error(
-            request, 'You must purchase the course to submit a review.')
+            if request.method == 'POST':
+                form = TestimonialsForm(request.POST)
+                if form.is_valid():
+                    testimonial = form.save(commit=False)
+                    testimonial.course = course
+                    testimonial.save()
+                    user_profile.reviewed_courses.add(course)
+                    messages.success(request, 'Your review is awaiting approval!')
+                    return redirect(reverse('course_detail', args=[course.name]))
+                else:
+                    messages.error(
+                        request, 'Failed to submit. Please ensure the form is valid.')
+            else:
+                form = TestimonialsForm()
     form = TestimonialsForm()
     context = {
         'course': course,
         'testimonials': testimonials,
         'form': form,
         'has_purchased': has_purchased,
+        'has_reviewed': has_reviewed,
     }
     return render(request, 'courses/course_detail.html', context)
 

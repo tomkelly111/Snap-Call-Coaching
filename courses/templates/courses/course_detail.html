@@ -2,7 +2,7 @@
 <div class="course-detail container-fluid">
   <div class="row m-2 m-sm-0 my-sm-3">
     <div class="col-12 col-lg-2">
-        {% if has_purchased %}
+        {% if has_purchased == True and has_reviewed != True %}
             <form method="POST" class="form" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form |crispy}}

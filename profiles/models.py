@@ -15,6 +15,8 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     purchased_courses = models.ManyToManyField(
         Course, blank=True, related_name='purchased_by')
+    reviewed_courses = models.ManyToManyField(
+        Course, blank=True, related_name='reviewed_courses')
     default_full_name = models.CharField(
         max_length=80, null=True, blank=True)
     default_phone_number = models.CharField(
