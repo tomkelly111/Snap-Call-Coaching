@@ -7,14 +7,14 @@
 <!-- block content -->
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid checkout">
   <div class="row">
     <div class="col  text-center">
       <hr />
       <h2 class="mb-4">Thank You!</h2>
       <hr />
       <p>
-        Your order is complete. A confirmation email will be sent to
+        Your order is complete. A confirmation email and details of how to access course materials will be sent to
         <strong>{{ order.email }}</strong>.
       </p>
     </div>
@@ -24,7 +24,7 @@
     <div class="col-12 col-md-6">
         <div class="row">
             <div class="col">
-                <h3 class="text-muted">Order Info:</h3>
+                <h3 class="font-italic">Order Info:</h3>
             </div>
         </div>
         
@@ -48,7 +48,7 @@
         
         <div class="row">
             <div class="col">
-                <small class="text-muted">Courses Purchased:</small>
+                <small class="font-italic">Courses Purchased:</small>
             </div>
         </div>
         
@@ -67,7 +67,7 @@
         
         <div class="row">
             <div class="col">
-                <small class="text-muted">Delivering To:</small>
+                <small class="font-italic">Delivering To:</small>
             </div>
         </div>
         
@@ -151,7 +151,7 @@
         
         <div class="row">
             <div class="col">
-                <small class="text-muted">Price:</small>
+                <small class="font-italic">Price:</small>
             </div>
         </div>
         
@@ -160,7 +160,7 @@
                 <p class="mb-0 text-black font-weight-bold">Order Total</p>
             </div>
             <div class="col-12 col-md-8 text-md-right">
-                <p class="mb-0">{{ order.order_total }}</p>
+                <p class="mb-0">€{{ order.order_total }}</p>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
 <!-- block content -->
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid checkout">
     <div class="row">
         <div class="col">
             <hr />
@@ -20,13 +20,13 @@
     <div class="col-0 col-sm-8">
       <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <p class="text-muted">Order Summary</p>
+            <p class="font-italic">Order Summary</p>
             <div class="row">
                 <div class="col-7 offset-2">
-                    <p class="mb-1 mt-0 small text-muted">Course</p>
+                    <p class="mb-1 mt-0 small">Course</p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                    <p class="mb-1 mt-0 small">Subtotal</p>
                 </div>
             </div>
             {% for item in bag_items %}
@@ -38,7 +38,7 @@
                     <p class="my-0"><strong>{{ item.course.name }}</strong></p>
                 </div>
                 <div class="col-3 text-right">
-                    <p class="my-0 small text-muted">${{ item.course.price }}</p>
+                    <p class="my-0 small">${{ item.course.price }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -54,7 +54,7 @@
             <hr>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-muted">Please fill out the form below to complete your order</p>
+            <p class="font-italic">Please fill out the form below to complete your order</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
