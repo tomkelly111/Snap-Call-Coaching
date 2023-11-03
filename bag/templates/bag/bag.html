@@ -1,20 +1,20 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-<div class="container-fluid">
+<div class="black-backdrop container-fluid">
   <div class="row m-2 m-sm-0 my-sm-3">
     <div class="col-0 col-md-2"></div>
     <div class="col-0 col-sm-8">
       <div class="row">
         <div class="col">
           {% if bag_items %}
-          <div class="table-responsive rounded">
-            <table class="table table-sm table-borderless">
-              <thead class="text-black">
+          <div class="table-responsive rounded mt-3">
+            <table class="table table-sm text-white">
+              <thead class="text-white">
                 <tr>
                   <th scope="col">Course</th>
                   <th scope="col"></th>
                   <th scope="col">Price</th>
                   <th scope="col"></th>
-                  <th scope="col"></th>
+                  <th scope="col">Remove from cart</th>
                 </tr>
               </thead>
 
@@ -54,7 +54,7 @@
                 <td colspan="5" class="text-right">
                   <a
                     href="{% url 'course_contents' %}"
-                    class="btn btn-outline-black rounded-0 btn-lg"
+                    class="btn btn-secondary m-2"
                   >
                     <span class="icon">
                       <i class="fas fa-chevron-left"></i>
@@ -63,7 +63,7 @@
                   </a>
                   <a
                     href="{% url 'checkout' %}"
-                    class="btn btn-black rounded-0 btn-lg"
+                    class="btn btn-warning m-2"
                   >
                     <span class="text-uppercase">Secure Checkout</span>
                     <span class="icon">
@@ -75,10 +75,10 @@
             </table>
           </div>
           {% else %}
-          <p class="lead mb-5">Your cart is empty.</p>
+          <p class="lead my-5">Your cart is empty.</p>
           <a
             href="{% url 'course_contents' %}"
-            class="btn btn-outline-black rounded-0 btn-lg"
+            class="btn btn-secondary m-4"
           >
             <span class="icon">
               <i class="fas fa-chevron-left"></i>

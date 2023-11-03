@@ -178,13 +178,13 @@ body {
 }
 
 /* Course_detail.html styling */
-.course-detail {
+.black-backdrop {
     color: #fff;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/media/playing-cards-background.jpg');
     
 }
 
-.course-detail hr {
+.black-backdrop hr {
     background-color: #fff;
 }
 
@@ -195,6 +195,11 @@ body {
 }
 
 /* Bag styling */
+
+.bag-styling {
+    color: #fff;
+}
+
 .icon {
     align-items: center;
     display: inline-flex;
