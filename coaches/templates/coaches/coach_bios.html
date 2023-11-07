@@ -8,7 +8,11 @@
   <div class="col-12 col-sm-6 col-lg-4 p-3">
     <div class="row coach-profile">
         <div class="col-12 col-md-6 coach-picture">
-            <img src="/media/aces.jpg" alt="Profile Picture">
+            {% if "placeholder" in coach.featured_image.url %}
+            <img src="{{ MEDIA_URL }}aces.jpg" alt="Coach Profile Picture" />
+            {% else %}
+            <img src=" {{ coach.featured_image.url }}" alt="Coach Profile Picture" />
+            {% endif %}
         </div>
         <div class="col-12 col-md-6 coach-details">
             <h2>{{ coach.name }}</h2>
@@ -24,17 +28,6 @@
         </div>
         </div>
     </div>
-    <!-- <div class="card h-100">
-      <img class="card-img-top" src="/media/aces.jpg" alt="" />
-      <div class="card-body">
-        <h5 class="card-title">{{ coach.name }}</h5>
-        <p class="card-text">{{ coach.biography| safe }}</p>
-        <p class="card-text">{{ coach.accolades| safe }}</p>
-        {% for course in coach.courses.all %}
-        <li><a href="{% url 'course_detail' course=course.name %}">{{ course.name }}</a></li>
-        {% endfor %}
-      </div>
-    </div> -->
   </div>
   {% endfor %}
 </div>
