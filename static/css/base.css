@@ -90,14 +90,14 @@ body {
         font-size: smaller;
         width: 300px;
         height: 300px;
-        border: 5px solid red;
         border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: url('/media/aces.jpg') center/cover;
-        margin-top: 20px;
-        margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('/media/aces.jpg') center/cover;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
 }
 
@@ -107,14 +107,14 @@ body {
         font-size: smaller;
         width: 250px;
         height: 250px;
-        border: 5px solid red;
         border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: url('/media/aces.jpg') center/cover;
-        margin-top: 20px;
-        margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('/media/aces.jpg') center/cover;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
 }
 
