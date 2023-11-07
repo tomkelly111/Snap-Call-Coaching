@@ -9,7 +9,16 @@ body {
     background: linear-gradient (rgba(255, 246, 242, 0.9), rgba(255, 246, 242, 0.9)), url('/media/playing-cards-background.jpg');
 }
 
+/*NavBar*/
 .bg-dark {
+    background-color: #3B4C31 !important;
+}
+
+.dropdown-menu  {
+    background-color: #474746 !important;
+}
+
+.dropdown-menu a:hover {
     background-color: #3B4C31 !important;
 }
 
