@@ -198,6 +198,37 @@ body {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Coach Bios styling */
+.coach-profile {
+    background-color: #3B4C31;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.coach-picture {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.coach-picture img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.coach-details {
+    flex: 2;
+    padding: 20px;
+    margin-left: 10px;
+}
+
 /* Bag styling */
 
 .bag-styling {
