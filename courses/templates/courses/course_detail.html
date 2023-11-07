@@ -37,6 +37,14 @@
           {% csrf_token %}
 
           <div class="col-12 mt-5 px-0">
+            {% if has_purchased == True %}
+            <a href="{% url 'course_contents' %}" class="btn btn-secondary btn-sm m-1">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Course already purchased, view our other courses here.</span>
+            </a>
+            {% else %}
             <a
               href="{% url 'course_contents' %}"
               class="btn btn-secondary btn-sm m-1"
@@ -51,6 +59,7 @@
               class="btn btn-warning btn-sm m-1"
               value="Purchase now for €{{ course.price }}"
             />
+            {% endif %}
           </div>
           <input
             type="hidden"
