@@ -27,7 +27,7 @@
         {% if request.user.is_superuser%}
 
             <a class="btn btn-info btn-sm m-1" href="{% url 'edit_course' course.id %}" role="button">Edit Course</a>
-            <a class="btn btn-danger btn-sm m-1" href="{% url 'delete_course' course.id %}" role="button">Delete Course</a>
+            <a class="btn btn-danger btn-sm m-1" href="{% url 'delete_confirmation' course.id %}" role="button">Delete Course</a>
 
         {% endif %}
       </div>

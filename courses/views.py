@@ -110,6 +110,21 @@ def edit_course(request, course_id):
 
 
 @login_required
+def delete_confirmation(request, course_id):
+    """ delete a course """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admins can do that')
+        return redirect(reverse('home'))
+
+    course = get_object_or_404(Course, pk=course_id)
+    template = 'courses/delete_confirmation.html'
+    context = {
+        'course': course,
+    }
+
+    return render(request, template, context)
+
+@login_required
 def delete_course(request, course_id):
     """ delete a course """
     if not request.user.is_superuser:
