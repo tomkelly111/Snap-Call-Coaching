@@ -15,11 +15,14 @@ body {
 }
 
 .dropdown-menu  {
-    background-color: #474746 !important;
+    background-color: #7F9173 !important;
 }
 
 .dropdown-menu a:hover {
     background-color: #3B4C31 !important;
+}
+.nav-icon:hover {
+    color: #CADDBC;
 }
 
 /* base.html styling  */
@@ -85,6 +88,16 @@ body {
 
 .signup-text {
     padding: 15px;
+}
+
+.btn-light {
+    color: #3B4C31 !important;
+    background-color: #CADDBC !important;
+}
+
+.btn-light:hover {
+    color: #CADDBC !important;
+    background-color: #3B4C31 !important;
 }
 
 /* Media queries */
@@ -310,7 +323,7 @@ footer {
 }
 
 .footer-icon:hover {
-    color: black;
+    color: #CADDBC;
     text-decoration: none;
 }
 

@@ -90,7 +90,7 @@
             <li class="list-inline-item dropdown">
                 <span class="navbar-text mr-3">
                     <a id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'profile' %}">
-                        <div class="text-center">
+                        <div class="nav-icon text-center">
                             <i class="fas fa-user fa-lg"></i>
                             <p class="my-0">My Account</p>
                         </div>
@@ -112,7 +112,7 @@
             <li class="list-inline-item">
                 <span class="navbar-text mr-2">
                     <a href="{% url 'view_bag' %}">
-                        <div class="text-center">
+                        <div class="nav-icon text-center">
                             <i class="fas fa-shopping-bag fa-lg"></i>
                             <p class="my-0  {% if product_count > 0 %}mx-4{% endif %}">{% if product_count > 0 %} {{ product_count }} {% else %} Cart Empty{% endif %}</p>
                         </div>
