@@ -11,7 +11,7 @@ from django.contrib import messages
 
 def course_contents(request):
     """a view to return courses page"""
-    courses = Course.objects.all()
+    courses = Course.objects.order_by('order')
 
     context = {
         'courses': courses

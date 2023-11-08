@@ -7,6 +7,7 @@ class Course(models.Model):
     description = models.CharField(max_length=250)
     content = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    order = models.PositiveIntegerField(default=0)
     featured_image = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
