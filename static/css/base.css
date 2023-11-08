@@ -34,7 +34,7 @@ body {
 
 /* Media queries */
 @media (max-width: 330px) {
-    .callout-paragraph {
+    .callout p {
         display: none;
     }
 }

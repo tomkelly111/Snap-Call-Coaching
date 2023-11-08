@@ -71,15 +71,6 @@
           <li class="nav-item {% if request.resolver_match.view_name == 'coach_bios' %}active{% endif %}">
             <a class="nav-link" href="{% url 'coach_bios' %}">Our Team</a>
           </li>
-          <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                        Coaches
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Beginner</a>
-                        <a class="dropdown-item" href="#">Intermediate</a>
-                        <a class="dropdown-item" href="#">Pro</a>
-                </li> -->
           {% if user.is_authenticated %}
           <li class="nav-item {% if request.resolver_match.view_name == 'account_logout' %}active{% endif %}">
             <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -135,11 +126,7 @@
     <header>
       <div class="container-fluid mt-5 callout">
         <section>
-          <h1>Welcome to Snap Call Coaching</h1>
-          <p class="callout-paragraph">
-            Your one stop shop for all your poker needs, whether you are a
-            seasoned pro or complete novice.
-          </p>
+        {% block callout %} {% endblock %}
         </section>
       </div>
       <hr />
