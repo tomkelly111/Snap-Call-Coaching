@@ -36,7 +36,7 @@ body {
 }
 
 /* Media queries */
-@media (max-width: 330px) {
+@media (max-width: 425px) {
     .callout p {
         display: none;
     }
@@ -120,6 +120,11 @@ body {
             margin-top: 20px;
             margin-bottom: 20px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .signup-text {
+        padding: 15px;
+        margin-bottom: 0;
     }
 }
 
