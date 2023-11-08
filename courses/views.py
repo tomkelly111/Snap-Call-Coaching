@@ -22,7 +22,7 @@ def course_contents(request):
 def course_detail(request, course):
     """a view to return course detail page"""
     course = get_object_or_404(Course, name=course)
-    testimonials = Testimonials.objects.filter(course=course)
+    testimonials = Testimonials.objects.filter(course=course).filter(approved=True)
     user_profile = UserProfile.objects.get(user=request.user)
     has_purchased = False
     has_reviewed = False

@@ -207,6 +207,7 @@ body {
 .black-backdrop {
     color: #fff;
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/media/playing-cards-background.jpg');
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     
 }
 
