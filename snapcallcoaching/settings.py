@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-tomkelly111-snap-call-co-643sk014w2.us2.codeanyapp.com', 'snapcallcoaching.herokuapp.com', 'snapcallcoaching-146b3f7fc4be.herokuapp.com']
+    '8000-tomkelly111-snap-call-co-rz0rslhfor.us2.codeanyapp.com', 'snapcallcoaching.herokuapp.com', 'snapcallcoaching-146b3f7fc4be.herokuapp.com']
 
 
 # Application definition
@@ -131,15 +131,18 @@ WSGI_APPLICATION = 'snapcallcoaching.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
