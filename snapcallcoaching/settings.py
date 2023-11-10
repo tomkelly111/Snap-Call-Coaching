@@ -193,8 +193,8 @@ if 'USE_ASW' in os.environ:
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'snapcallcoaching'
     AWS_S3_REGION_NAME = 'eu-west-1'
-    AWS_ACCESS_KEY_ID = os.inviron.get('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.inviron.get('AWS_SECRET_ACCESS_KEY')
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
     # static and media files
