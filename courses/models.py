@@ -1,5 +1,5 @@
 from django.db import models
-from cloudinary.models import CloudinaryField
+
 
 
 class Course(models.Model):
@@ -8,7 +8,7 @@ class Course(models.Model):
     content = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     order = models.PositiveIntegerField(default=0)
-    featured_image = CloudinaryField('image', default='placeholder')
+    featured_image = models.ImageField('image', default='placeholder')
 
     def __str__(self):
         return self.name

@@ -1,6 +1,6 @@
 from django.db import models
 from courses.models import Course
-from cloudinary.models import CloudinaryField
+
 
 
 class Coach(models.Model):
@@ -9,7 +9,7 @@ class Coach(models.Model):
         Course, blank=True, related_name='coached_courses')
     biography = models.TextField(max_length=500)
     accolades = models.TextField(max_length=500)
-    featured_image = CloudinaryField('image', default='placeholder')
+    featured_image = models.ImageField('image', default='placeholder')
 
     def __str__(self):
         return self.name
