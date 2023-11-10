@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-tomkelly111-snap-call-co-9er1vctj8y.us2.codeanyapp.com', 'snapcallcoaching.herokuapp.com', 'snapcallcoaching-146b3f7fc4be.herokuapp.com']
+    '8000-tomkelly111-snapcallcoa-t8y48uho3pd.ws-eu106.gitpod.io', 'snapcallcoaching.herokuapp.com', 'snapcallcoaching-146b3f7fc4be.herokuapp.com']
 
 
 # Application definition
@@ -190,7 +190,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-if 'USE_ASW' in os.environ:
+if 'USE_AWS' in os.environ:
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'snapcallcoaching'
     AWS_S3_REGION_NAME = 'eu-west-1'
