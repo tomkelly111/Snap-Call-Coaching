@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-tomkelly111-snap-call-co-rz0rslhfor.us2.codeanyapp.com', 'snapcallcoaching.herokuapp.com', 'snapcallcoaching-146b3f7fc4be.herokuapp.com']
+    '8000-tomkelly111-snap-call-co-9er1vctj8y.us2.codeanyapp.com', 'snapcallcoaching.herokuapp.com', 'snapcallcoaching-146b3f7fc4be.herokuapp.com']
 
 
 # Application definition
@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'crispy_forms',
-
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -191,7 +191,23 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+if 'USE_ASW' in os.environ:
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'snapcallcoaching'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.inviron.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.inviron.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOME_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
+    # static and media files
+    STATICFILES_STORAGE = 'custom_storages.storage.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    #override static and media urls in production
+    STATIC_URL = f'https://{AWS_S3_CUTSOM_DOMAIN}/{STATICFILES_LOCATION}'
+    MEDIA_URL = f'https://{AWS_S3_CUTSOM_DOMAIN}/{MEDIAFILES_LOCATION}'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
