@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand&family=Roboto+Condensed&display=swap');
+
+
+body {
+    height: 100%;
+    font-family: 'Kanit', sans-serif;
+    background-color: #474746;
+    margin-bottom: 150px;
+    background: linear-gradient (rgba(255, 246, 242, 0.9), rgba(255, 246, 242, 0.9)), url('/media/playing-cards-background.jpg');
+}
+
+/*NavBar*/
+.bg-dark {
+    background-color: #3B4C31 !important;
+}
+
+.dropdown-menu  {
+    background-color: #7F9173 !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: #3B4C31 !important;
+}
+.nav-icon:hover {
+    color: #CADDBC;
+}
+
+/* base.html styling  */
+.callout {
+    padding: 50px;
+    text-align: center;
+    color: white;
+    background: #777776;
+    min-height: 200px;
+    max-height: 300px;
+}
+
+/* Media queries */
+@media (max-width: 425px) {
+    .callout p {
+        display: none;
+    }
+}
+
+/* index.html styling */
+.circle-text {
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/media/aces.jpg') center/cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.rectangle-text {
+    width: 90%;
+    min-height: 350px;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/media/aces.jpg') center/cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.box-text {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.center-button {
+    align-items: center;
+    justify-content: center;
+    margin-left: 33%;
+}
+
+.poker-tips {
+    padding: 15px;
+}
+
+.signup-text {
+    padding: 15px;
+}
+
+.btn-light {
+    color: #3B4C31 !important;
+    background-color: #CADDBC !important;
+}
+
+.btn-light:hover {
+    color: #CADDBC !important;
+    background-color: #3B4C31 !important;
+}
+
+/* Media queries */
+
+@media (max-width: 450px) {
+
+    .poker-tips {
+        display: none;
+    }
+
+    .circle-text {
+        font-size: smaller;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('/media/aces.jpg') center/cover;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .signup-text {
+        padding: 15px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 295px) {
+
+    .circle-text {
+        font-size: smaller;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('/media/aces.jpg') center/cover;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* messages */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* Course_contents styling */
+.image-container {
+    padding: 0;
+    width: 100vh;
+    min-width: 270px;
+    max-width: 60vw;
+    max-height: 70vw;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: black;
+
+
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+
+
+
+}
+
+/* Media queries */
+@media (max-width: 520px) {
+    .image-container {
+        min-height: 320px;
+    }
+
+    .overlay h1,
+    .overlay p {
+        font-size: small;
+
+    }
+}
+
+/* Course_detail.html styling */
+.black-backdrop {
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/media/playing-cards-background.jpg');
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    
+}
+
+.black-backdrop hr {
+    background-color: #fff;
+}
+
+.testimonials {
+    word-wrap: break-word;
+    background-color: #000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Coach Bios styling */
+.coach-profile {
+    background-color: #3B4C31;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.coach-picture {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.coach-picture img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.coach-details {
+    flex: 2;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+/* Bag styling */
+
+.bag-styling {
+    color: #fff;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    color: blue;
+}
+
+.remove-item {
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    font-size: 1.5em;
+    height: 1em;
+    width: 1em;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 100%;
+    color: red;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+}
+
+.remove-item:hover {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+}
+
+/* Footer styling */
+footer {
+    background-color: #3B4C31;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background: #3B4C31;
+}
+
+.privacy-policy {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.footer-icon {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+
+}
+
+.footer-icon:hover {
+    color: #CADDBC;
+    text-decoration: none;
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p, h1, a {
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #ffffff
+    /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #3B4C31;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+    color: white;
+    /* text-info */
+}
