@@ -50,7 +50,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/media/aces.jpg') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/media/background-image-aces.jpg') center/cover;
     margin-top: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
@@ -63,7 +63,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/media/aces.jpg') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/media/background-image-aces.jpg') center/cover;
     margin-top: 20px;
     margin-bottom: 20px;
     color: white;
@@ -116,7 +116,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: url('/media/aces.jpg') center/cover;
+            background: url('/media/background-image-aces.jpg') center/cover;
             margin-top: 20px;
             margin-bottom: 20px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
@@ -138,7 +138,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: url('/media/aces.jpg') center/cover;
+            background: url('/media/background-image-aces.jpg') center/cover;
             margin-top: 20px;
             margin-bottom: 20px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
