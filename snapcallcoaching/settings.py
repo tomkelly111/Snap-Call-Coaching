@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
     '8000-tomkelly111-snapcallcoa-t8y48uho3pd.ws-eu106.gitpod.io', 'snapcallcoaching.herokuapp.com', 'snapcallcoaching-146b3f7fc4be.herokuapp.com']
