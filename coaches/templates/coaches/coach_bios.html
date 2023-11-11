@@ -28,9 +28,11 @@
             <p>{{ coach.biography| safe }}</p>
             <p>{{ coach.accolades| safe }}</p>
             <p>Teaches on the following courses:</p>
-            {% for course in coach.courses.all %}
-            <li><a href="{% url 'course_detail' course=course.name %}">{{ course.name }}</a></li>
-            {% endfor %}
+            <ul>
+                {% for course in coach.courses.all %}
+                <li><a href="{% url 'course_detail' course=course.name %}">{{ course.name }}</a></li>
+                {% endfor %}
+            </ul>
         </div>
         </div>
     </div>
