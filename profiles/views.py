@@ -5,6 +5,7 @@ from .forms import UserProfileForm
 from django.contrib import messages
 from courses.models import Course
 
+
 @login_required
 def profile(request):
     """ Display the user's profile. """
@@ -17,7 +18,8 @@ def profile(request):
             messages.success(request, 'Your billing details have been saved')
         else:
             messages.error(
-                request, 'Update failed, please ensure form is validly completed')
+                request, 'Update failed, \
+                please ensure form is validly completed')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.purchased_courses.all()

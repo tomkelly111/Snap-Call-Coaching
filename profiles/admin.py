@@ -12,4 +12,3 @@ class UserProfileAdmin(admin.ModelAdmin):
         return ", ".join([course.name for course in obj.purchased_courses.all()])
 
     display_courses.short_description = 'Enrolled in the following courses:'
-

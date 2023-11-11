@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.core.mail import send_mail 
+from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 from .models import Order, OrderLineItem
@@ -8,7 +8,6 @@ from profiles.models import UserProfile
 import json
 import time
 import stripe
-
 
 
 class StripeWH_Handler:
@@ -41,7 +40,7 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
-    
+
     def handle_payment_intent_succeeded(self, event):
         """
         Handle a the payment_intent.succeeded webhook fom stripe
@@ -56,28 +55,28 @@ class StripeWH_Handler:
             intent.latest_charge
         )
 
-        billing_details = stripe_charge.billing_details 
-        order_total = round(stripe_charge.amount / 100, 2)
+        billing_details = stripe_charge.billing_details
 
         # update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
-            
+
             if save_info:
                 profile.default_full_name = billing_details.name,
                 profile.default_phone_number = billing_details.phone,
                 profile.default_postcode = billing_details.address.postal_code,
                 profile.default_town_or_city = billing_details.address.city,
-                profile.default_street_address1 = billing_details.address.line1,
-                profile.default_street_address2 = billing_details.address.line2,
+                profile.default_street_address1 = (
+                            billing_details.address.line1,)
+                profile.default_street_address2 = (
+                            billing_details.address.line2,)
                 profile.default_county = billing_details.address.state,
                 for course_id, quantity in json.loads(bag).items():
                     course = Course.objects.get(id=course_id)
                     profile.purchased_courses.add(course)
                 profile.save()
-
 
         order_exists = False
         attempt = 1
@@ -97,7 +96,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} | \
+                SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
@@ -132,9 +132,10 @@ class StripeWH_Handler:
 
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]}| SUCCESS Created order in webhook',
+            content=f'Webhook received: {event["type"]}| \
+            SUCCESS Created order in webhook',
             status=200)
-    
+
     def handle_payment_intent_payment_failed(self, event):
         """
         Handle a the payment_intent.payment-failed webhook fom stripe
@@ -142,5 +143,3 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
-
-

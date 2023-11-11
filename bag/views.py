@@ -36,7 +36,8 @@ def remove_from_bag(request, course_id):
         bag = request.session.get('bag', {})
         bag.pop(course_id)
         messages.success(
-            request, f'The {course.name} course has been removed from your cart')
+            request, f'The {course.name} \
+            course has been removed from your cart')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
