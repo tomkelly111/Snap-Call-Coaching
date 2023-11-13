@@ -3,7 +3,6 @@ from .models import Course, Testimonials
 from django.contrib.auth.decorators import login_required
 from .forms import CourseForm, TestimonialsForm
 from profiles.models import UserProfile
-from coaches.models import Coach
 from django.contrib import messages
 
 # Create your views here.
@@ -43,10 +42,12 @@ def course_detail(request, course):
                         user_profile.reviewed_courses.add(course)
                         messages.success(
                             request, 'Your review is awaiting approval!')
-                        return redirect(reverse('course_detail', args=[course.name]))
+                        return redirect(reverse('course_detail',
+                                                args=[course.name]))
                     else:
                         messages.error(
-                            request, 'Failed to submit. Please ensure the form is valid.')
+                            request, 'Failed to submit. Please \
+                            ensure the form is valid.')
                 else:
                     form = TestimonialsForm()
     form = TestimonialsForm()
@@ -74,7 +75,8 @@ def add_course(request):
             return redirect(reverse('course_detail', args=[course.name]))
         else:
             messages.error(
-                request, 'Failed to add new course, please ensure form is validly completed')
+                request, 'Failed to add new course, please \
+                ensure form is validly completed')
     else:
         form = CourseForm()
     form = CourseForm()
@@ -101,7 +103,8 @@ def edit_course(request, course_id):
             return redirect(reverse('course_detail', args=[course.name]))
         else:
             messages.error(
-                request, 'Failed to update course. Please ensure the form is valid.')
+                request, 'Failed to update course. \
+                Please ensure the form is valid.')
     else:
         form = CourseForm(instance=course)
         messages.info(request, f'You are editing {course.name}')

@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 class Course(models.Model):
     name = models.CharField(max_length=80)
     description = models.CharField(max_length=250)
@@ -16,8 +15,8 @@ class Course(models.Model):
 
 class Testimonials(models.Model):
     course = models.ForeignKey(Course,
-                             on_delete=models.CASCADE,
-                             related_name='testimonial')
+                               on_delete=models.CASCADE,
+                               related_name='testimonial')
     name = models.CharField(max_length=80)
     review = models.CharField(max_length=250)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -26,8 +25,6 @@ class Testimonials(models.Model):
     class Meta:
         verbose_name_plural = "Testimonials"
         ordering = ['-created_on']
-    
 
     def __str__(self):
         return self.review
-

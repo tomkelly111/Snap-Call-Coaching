@@ -2,7 +2,6 @@ from django.db import models
 from courses.models import Course
 
 
-
 class Coach(models.Model):
     name = models.CharField(max_length=80)
     courses = models.ManyToManyField(
