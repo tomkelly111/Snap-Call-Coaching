@@ -222,6 +222,8 @@ Users have the option to delete their own posts. If they choose to do so a modal
 
 ### Database & Models
 
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/ed14259c-2282-4668-a266-038ff62d8ced)
+
 <table>  
         <tr>
               <th>Coffee Shop Post</th>
