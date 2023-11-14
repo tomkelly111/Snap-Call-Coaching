@@ -38,6 +38,7 @@ def course_detail(request, course):
                     if form.is_valid():
                         testimonial = form.save(commit=False)
                         testimonial.course = course
+                        testimonial.user = request.user
                         testimonial.save()
                         user_profile.reviewed_courses.add(course)
                         messages.success(
