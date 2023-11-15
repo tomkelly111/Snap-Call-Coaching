@@ -11,6 +11,7 @@
     <div class="col-12 col-lg-3">
         {% if has_purchased == True and has_reviewed != True %}
         <div class="testimonials p-2 m-2 my-4">
+          <hr>
             <h3>Leave a testimonial as to what you thought of this course!</h3>
             <hr>
             <form method="POST" class="form" enctype="multipart/form-data">
@@ -83,6 +84,9 @@
       </div>
     </div>
     <div class="col-12 col-lg-3">
+      <hr>
+      <h3 class="p-2">Student Testimonials</h3>
+      <hr>
         {% for testimonial in testimonials %}
         <div class="testimonials p-2 m-2 my-4">
             <p class="font-italic">{{ testimonial.review }}</p>
