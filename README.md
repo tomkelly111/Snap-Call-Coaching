@@ -16,6 +16,10 @@
   - [User Stories](#user-stories)
   - [Features](#features)
 
+- [Marketing](#marketing)
+  - [SEO](#seo) 
+  - [Social Media](#social-media)
+  - [Newsletter Signup](#newsletter-signup)
 
 - [Functionality](#features)
   - [CRUD](#crud)
@@ -39,10 +43,13 @@
 ## User Experience
 
 
-### Goal and Business Plan
+### Goal 
 The goal of the website is to sell online poker coaching courses to all level of players. Courses range from absolute beginner right through to aspiring proffessionals. Price ranges for the courses reflect the level of expertise covered. 
 
-In designing the site these content questions were considered and answered as follows:
+#### Business Plan
+The site follows a Business to Consumer model. All of its services/products are online. The site sells online courses for a once off payment and some of the more advanced courses include one-on-one coaching sessions as part of the package.
+
+##### In designing the site these content questions were considered and answered as follows:
 
 - What do  users need?
   - To learn how to play poker
@@ -86,10 +93,11 @@ In designing the site these content questions were considered and answered as fo
 - Would there be other pages within the site which we could link to from a chosen page?
   - Each course will list the coaches available and contain links to each coaches profile. Each coaches bio will list the the course they coach on and link to those courses. 
 
-In determining the marketing of the site these questions were considered and answered:
+##### In determining the marketing of the site these questions were considered and answered:
 
 - Who are our users?
   - Given the profile of poker poker players in general our users are likely to be mostly males between the ages of 18 - 45
+    
 - Which online platforms would we find lots of our users?
   - Many of our users would be frequent users of the larger poker playing sites such as PokerStars, GGPoker and 888Poker. They will also browse online forums such as twoplustwo and r/poker on reddit. 
   
@@ -132,20 +140,20 @@ While the use of agile methodologies was useful in staying on track with the pro
 
 
 #### Must Haves (Completed)
-- As a **User** I can **view available courses** so that **choose which course suits me best**.
+- As a **user** I can **view available courses** so that **choose which course suits me best**.
 - As a **site owner** I can **provide a function where users can sign up for weekly emails** so that **I have a database of customers to whom I can make offers**.
-- As a **User** I can **use a nav bar** so that **easily navigate to different sections of the site**.
+- As a **user** I can **use a nav bar** so that **easily navigate to different sections of the site**.
 - As a **user** I can **view details and bio of all coaches** so that **i can be assured of the quality of the courses**.
 - As a **admin** I can **CRUD courses on the front end** so that **I can easily update the site with new courses as they become available**.
 - As a **site owner** I have **a facebook business page** so that **I can market the business**.
-- As a **User** I can **create an account** so that **I can access materials purchased**.
+- As a **user** I can **create an account** so that **I can access materials purchased**.
 - As a **developer** I have **included key words throughout the site's code** so that **the site will rank highly on search engines**.
 - As a **user** I can **purchase a course** so that **I can access the course materials**.
 - As a **user** I can **see a 404 page when there is an error** so that **the site feels fully functional**.
 - As a **user** I can **receive messages throughout the site** so that **i know what actions i have taken**.
 
 #### Should Haves (completed)
-- As a **User** I can **see a clear description of the site and what it offers** so that **I can immediately know if I am interested in what the site offers**.
+- As a **user** I can **see a clear description of the site and what it offers** so that **I can immediately know if I am interested in what the site offers**.
 - As a **user** I can **view which coaches teach on which course** so that **I can know who will be teaching each course**.
 - As a **user** I can **click a course in a coaches bio** so that **I can be brought to a page to purchase that course**.
 - As a **user** I can **add items to a shopping cart** so that **i can purchase multiple courses at once**.
@@ -159,6 +167,49 @@ While the use of agile methodologies was useful in staying on track with the pro
 - As a **admin** I can **create blog posts** so that **i can give site users tips on playing poker and content can be used for marketing purposes**. (Could Have)
 - As a **user** I can **view testimonials from the homepage** so that **I can immediately see what past users thought of the site**. (Won't Have)
 - As a **site owner** I can **display books that are for sale** so that **I can sell books to users**. (Won't Have)
+
+- [Marketing](#marketing)
+  - [SEO](#seo) 
+  - [Social Media](#social-media)
+  - [Newsletter Signup](#newsletter-signup)
+## MARKETING
+
+### SEO
+#### Keywords
+As part of SEO optimisation we conducted keyword research. This involved brainstorming as many short-tail and long-tail keywords as possible. As part of this process we searched google for our key woords and took note of the autocomplete options as well as the "People also ask" and "Related searches" sections. After compiling our list we then used [Word Tracker](https://www.wordtracker.com/) to find which of our keywords have high volume and low competition. Some of the results are set out below:
+
+![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/9b415325-c1f7-4ba7-8a4d-d0deccf11265)
+
+![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/97a7d21d-ee0f-4306-beab-6d07299c7b97)
+
+![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/06f3ce86-aa94-49c3-857d-d0269ace087b)
+
+
+Based on the results we selected the keywords highlighted in yellow below:
+
+![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/672a95c8-3017-4242-be06-27c069b8b9a4)
+
+##### HTML Implementation
+We included these keywords where appropriate throughout our HTML including:
+	- using <strong> and <emp> tags where applicable
+ 	- using rel="noopener" for social media links
+  	- using keywords in our image alt attributes where appropriate
+   	- using keywords in image file names
+    	- adding keywords to the <title>
+     	- adding meta descriptions and keywords sections
+#### Other
+We also incldued in the final site a robots.txt and a sitemap.xml file for further SEO.
+
+
+### Social Media
+As part of our marketing we created a Facebook Business Page. It is hoped that in the future our blogposts can be promoted here as well as discounts or sales. This has been incldued in the footer on all pages of the site.
+
+![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/1e4339e3-e4fb-4771-84f3-69c985fd83a0)
+![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/ef7694d1-93cb-45b5-b0d8-92fffef9bebb)
+
+
+### Newsletter Signup
+Similar to other businesses in this market we have implmented a sign up form on our homepage. This was done using [Mail Chimp](https://mailchimp.com/). This offers users the ability to sign up to our newsletter which will be sent weekly. The newsletter will offer free poker tips and strategy to all that sign up. It is hoped that this sign up form will allow us to build a strong userbase of dedicated poker players. The goal is to then use these newsletters to promote discounts or sales that are occuring on the site in the hope of increasing our sales.
 
 ### Features
 #### Homepage
