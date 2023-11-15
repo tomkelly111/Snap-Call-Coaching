@@ -47,141 +47,145 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="{% url 'home' %}">Snap Call Coaching</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <content>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="{% url 'home' %}">Snap Call Coaching</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item {% if request.resolver_match.view_name == 'home' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'home' %}"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item {% if request.resolver_match.view_name == 'course_contents' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'course_contents' %}">Courses</a>
-          </li>
-          <li class="nav-item {% if request.resolver_match.view_name == 'coach_bios' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'coach_bios' %}">Our Team</a>
-          </li>
-          {% if user.is_authenticated %}
-          <li class="nav-item {% if request.resolver_match.view_name == 'account_logout' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-          </li>
-          {% else %}
-          <li class="nav-item {% if request.resolver_match.view_name == 'account_signup' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-          </li>
-          <li class="nav-item {% if request.resolver_match.view_name == 'account_login' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="list-inline list-unstyled text-center text-lg-right my-0  mr-2">
-            <li class="list-inline-item dropdown">
-                <span class="navbar-text mr-3">
-                    <a id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'profile' %}">
-                        <div class="nav-icon text-center">
-                            <i class="fas fa-user fa-lg"></i>
-                            <p class="my-0">My Account</p>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="user-options">
-                        {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                        <a href="{% url 'add_course' %}" class="dropdown-item">Course Management</a>
-                        {% endif %}
-                        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                        {% else %}
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                        {% endif %}
-                    </div>
-                </span>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item {% if request.resolver_match.view_name == 'home' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'home' %}"
+                >Home <span class="sr-only">(current)</span></a
+              >
             </li>
-            <li class="list-inline-item">
-                <span class="navbar-text mr-2">
-                    <a href="{% url 'view_bag' %}">
-                        <div class="nav-icon text-center">
-                            <i class="fas fa-shopping-bag fa-lg"></i>
-                            <p class="my-0  {% if product_count > 0 %}mx-4{% endif %}">{% if product_count > 0 %} {{ product_count }} {% else %} Cart Empty{% endif %}</p>
-                        </div>
-                    </a>
-                </span>
-            <li>
-        </ul>
-    </div>
-    
-    </nav>
-    <header>
-      <div class="container-fluid mt-5 callout">
-        <section>
-        {% block callout %} {% endblock %}
-        </section>
+            <li class="nav-item {% if request.resolver_match.view_name == 'course_contents' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'course_contents' %}">Courses</a>
+            </li>
+            <li class="nav-item {% if request.resolver_match.view_name == 'coach_bios' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'coach_bios' %}">Our Team</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="nav-item {% if request.resolver_match.view_name == 'account_logout' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item {% if request.resolver_match.view_name == 'account_signup' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            <li class="nav-item {% if request.resolver_match.view_name == 'account_login' %}active{% endif %}">
+              <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0  mr-2">
+              <li class="list-inline-item dropdown">
+                  <span class="navbar-text mr-3">
+                      <a id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'profile' %}">
+                          <div class="nav-icon text-center">
+                              <i class="fas fa-user fa-lg"></i>
+                              <p class="my-0">My Account</p>
+                          </div>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="user-options">
+                          {% if request.user.is_authenticated %}
+                          {% if request.user.is_superuser %}
+                          <a href="{% url 'add_course' %}" class="dropdown-item">Course Management</a>
+                          {% endif %}
+                          <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                          <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                          {% else %}
+                          <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                          <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                          {% endif %}
+                      </div>
+                  </span>
+              </li>
+              <li class="list-inline-item">
+                  <span class="navbar-text mr-2">
+                      <a href="{% url 'view_bag' %}">
+                          <div class="nav-icon text-center">
+                              <i class="fas fa-shopping-bag fa-lg"></i>
+                              <p class="my-0  {% if product_count > 0 %}mx-4{% endif %}">{% if product_count > 0 %} {{ product_count }} {% else %} Cart Empty{% endif %}</p>
+                          </div>
+                      </a>
+                  </span>
+              <li>
+          </ul>
       </div>
-      <hr />
-    </header>
+      
+      </nav>
+      <header>
+        <div class="container-fluid mt-5 callout">
+          <section>
+          {% block callout %} {% endblock %}
+          </section>
+        </div>
+        <hr />
+      </header>
 
-    {% if messages %}
-    <div class="message-container">
-        <!-- messages -->
-      {% for message in messages %}
-    <!-- include messages -->
-    {% with message.level as level %}
-        {% if level == 40 %}
-            {% include 'includes/toasts/toast_error.html' %}
-        {% elif level == 30 %}
-            {% include 'includes/toasts/toast_warning.html' %}
-        {% elif level == 25 %}
-            {% include 'includes/toasts/toast_success.html' %}
-        {% else %}
-            {% include 'includes/toasts/toast_info.html' %}
-        {% endif %}
-    {% endwith %}
-      <!-- end loop -->
-      {% endfor %}
-    </div>
-    {% endif %} {% block page_header %} {% endblock %}
-    <!-- block tags -->
-    {% block content %} {% endblock %} {% block postloadjs %}
-    <script type="text/javascript">
-      $(".toast").toast("show");
-    </script>
-    {% endblock %}
-    <footer class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="col-md-4">
-          <p>&copy; 2023 Snap Call Coaching. All rights reserved.</p>
-        </div>
+      {% if messages %}
+      <div class="message-container">
+          <!-- messages -->
+        {% for message in messages %}
+      <!-- include messages -->
+      {% with message.level as level %}
+          {% if level == 40 %}
+              {% include 'includes/toasts/toast_error.html' %}
+          {% elif level == 30 %}
+              {% include 'includes/toasts/toast_warning.html' %}
+          {% elif level == 25 %}
+              {% include 'includes/toasts/toast_success.html' %}
+          {% else %}
+              {% include 'includes/toasts/toast_info.html' %}
+          {% endif %}
+      {% endwith %}
+        <!-- end loop -->
+        {% endfor %}
       </div>
-      <div class="row">
-        <div class="col-12 col-md-4">
-          <a
-            href="https://www.privacypolicygenerator.info/live.php?token=UHfEmPw7yIozL7qH9gdgVNN84sUBTPJh"
-            aria-label="View Our Privacy Policy"
-            class="privacy-policy"
-            target="_blank"
-            >View our privacy policy</a
-          >
+      {% endif %} {% block page_header %} {% endblock %}
+      <!-- block tags -->
+      {% block content %} {% endblock %} {% block postloadjs %}
+      <script type="text/javascript">
+        $(".toast").toast("show");
+      </script>
+      {% endblock %}
+    </content>
+    <footer>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <p>&copy; 2023 Snap Call Coaching. All rights reserved.</p>
+          </div>
         </div>
-        <div class="col-12 col-md-4"></div>
-        <div class="col-12 col-md-4">
-          <a href="https://www.facebook.com/profile.php?id=61551689926878" target="_blank" aria-label="Facebook"
-            ><i class="fa-brands fa-facebook footer-icon"></i
-          ></a>
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <a
+              href="https://www.privacypolicygenerator.info/live.php?token=UHfEmPw7yIozL7qH9gdgVNN84sUBTPJh"
+              aria-label="View Our Privacy Policy"
+              class="privacy-policy"
+              target="_blank"
+              >View our privacy policy</a
+            >
+          </div>
+          <div class="col-12 col-md-4"></div>
+          <div class="col-12 col-md-4">
+            <a href="https://www.facebook.com/profile.php?id=61551689926878" target="_blank" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook footer-icon"></i
+            ></a>
+          </div>
         </div>
       </div>
     </footer>
