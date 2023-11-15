@@ -220,93 +220,14 @@ Users have the option of editing their own posts if they wish. Once a post is up
 #### Delete
 Users have the option to delete their own posts. If they choose to do so a modal will appear asking them to confirm the deletion. This is to ensure a post is not deleted accidentally as deleting a post cannot be undone and all associated comments will also be deleted.
 
-### Database & Models
+## DATABASE & MODELS
+
+The below database schema was designed using [DrawSQL](https://drawsql.app/). This was of assistance in visualising the layout of the models to be used.
 
 <img width="556" alt="image" src="https://github.com/tomkelly111/trialworkspace/assets/111172617/6b6984e6-0371-49d8-9f79-661cd3bfde0b">
 
-<table>  
-        <tr>
-              <th>Coffee Shop Post</th>
-            </tr>    
-	<tr>
-              <th>Name</th>
-              <th>Type</th>
-            </tr>
-            <tr>
-              <td>Shop</td>
-              <td>CharField (unique)</td>
-            </tr>
-            <tr>
-              <td>Description</td>
-              <td>CharField</td>
-            </tr>
-            <tr>
-              <td>Review</td>
-              <td>CharField</td>
-            </tr>
-            <tr>
-              <td>Author</td>
-              <td>ForeignKey</td>
-            </tr>
-            <tr>
-              <td>created_on</td>
-              <td>DateTimeField</td>
-            </tr>
-            <tr>
-              <td>featured_image</td>
-              <td>CloudinaryField</td>
-            </tr>
-	<tr>
-              <td>Approved</td>
-              <td>BooleanField</td>
-            </tr>
-	<tr>
-              <td>Location</td>
-              <td>Charfield</td>
-            </tr>
-	<tr>
-              <td>Rating</td>
-              <td>Integerfield</td>
-            </tr>
-</table>
 
-<table>  
-        <tr>
-              <th>Comment Model</th>
-            </tr>  
-	<tr>
-              <th>Name</th>
-              <th>Type</th>
-            </tr>
-	<tr>
-              <td>Post</td>
-              <td>ForeignKey</td>
-            </tr>
-            <tr>
-              <td>Name</td>
-              <td>CharField</td>
-            </tr>
-            <tr>
-              <td>Email</td>
-              <td>EmailField</td>
-            </tr>
-            <tr>
-              <td>Body</td>
-              <td>TextField</td>
-            </tr>
-            <tr>
-              <td>created_on</td>
-              <td>DateTimeField</td>
-            </tr>
-            <tr>
-              <td>Approved</td>
-              <td>BooleanField</td>
-            </tr>
-	<tr>
-              <td>Rating</td>
-              <td>Integerfield</td>
-            </tr>
-</table>
+## TESTING
 
 ### Validation
 
@@ -326,305 +247,118 @@ Accessibility - I confirmed the code used is accessible by using lighthouse in d
 
 
 
-## TESTING
-
 ### Manual Testing
-#### Homepage
-<table>  
-            <tr>
-              <th>Action</th>
-              <th>Expected Behaviour</th>
-              <th>Pass / Fail </th>
-            </tr>
-            <tr>
-              <td>View hompage</td>
-              <td>last three posts are displayed in 3 columns all links work</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>View hompage</td>
-              <td>All nav bar links work but "add coffee shop post" link is inactive when user is logged out</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>View hompage</td>
-              <td>Footer sits at bottom of page and all icon links work</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Use search bar</td>
-              <td>Successful search returns result</td>
-              <td>Pass</td>
-            </tr>
-	<tr>
-              <td>Use search bar</td>
-              <td>Unsuccessful search returns prompt to add coffee shop</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Click "Read reviews" button on post</td>
-              <td>Brings user to post detail view</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Click Login</td>
-              <td>Brings user to login page</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Click Register</td>
-              <td>Brings user to register page</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Click Add a Coffee Shop</td>
-              <td>Brings user to new post page</td>
-              <td>Pass</td>
-            </tr>
-</table>
-
-#### Register Page
-<table>  
-            <tr>
-              <th>Action</th>
-              <th>Expected Behaviour</th>
-              <th>Pass / Fail </th>
-            </tr>
-            <tr>
-              <td>Click Register in Nav Bar</td>
-              <td>Sign Up form is displayed</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Sign Up</td>
-              <td>Message alert says sign in was successful</td>
-              <td>Pass</td>
-            </tr>
-</table>
-
-#### Login Page
-<table>  
-            <tr>
-              <th>Action</th>
-              <th>Expected Behaviour</th>
-              <th>Pass / Fail </th>
-            </tr>
-            <tr>
-              <td>Click Login in Nav Bar</td>
-              <td>Login form is displayed</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Login</td>
-              <td>Message alert says login was successful</td>
-              <td>Pass</td>
-            </tr>
-</table>
-
-#### Login Out Page
-<table>  
-            <tr>
-              <th>Action</th>
-              <th>Expected Behaviour</th>
-              <th>Pass / Fail </th>
-            </tr>
-            <tr>
-              <td>Click Logout in Nav Bar</td>
-              <td>Logout confirmation is displayed</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Logout</td>
-              <td>Message alert says logout was successful</td>
-              <td>Pass</td>
-            </tr>
-</table>
-
-#### Add a Coffee Shop Page
-<table>  
-            <tr>
-              <th>Action</th>
-              <th>Expected Behaviour</th>
-              <th>Pass / Fail </th>
-            </tr>
-            <tr>
-              <td>User logged out - Click Add a Coffee Shop in Nav Bar</td>
-              <td>Link inactive</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>User logged in - Click Add a Coffee Shop in Nav Bar</td>
-              <td>Brings user to new post page</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Create Post</td>
-              <td>Message alert says post will appear once approved and user is returned to Homepage</td>
-              <td>Pass</td>
-            </tr>
-</table>
-
-#### Post Detail Page
-<table>  
-            <tr>
-              <th>Action</th>
-              <th>Expected Behaviour</th>
-              <th>Pass / Fail </th>
-            </tr>
-            <tr>
-              <td>Click Read Reviews on post on Homepage</td>
-              <td>Brings User to Post Detail page</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Edit / Delete</td>
-              <td>If user is author of post there should be options to edit or delete post</td>
-              <td>Pass</td>
-            </tr>
-	<tr>
-            <td>Click Edit</td>
-              <td>User is brought to Edit Post page</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-            <td>Edit Post</td>
-              <td>User is returned to Homepage and message alert displays stating post is waiting approval</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-            <td>Delete Post</td>
-              <td>Modal should appear asking user to confirm as deletion cannot be undone</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-            <td>Add Comment</td>
-              <td>If user is not logged in text should display asking them to login or register in order to post a comment</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-            <td>Add Comment</td>
-              <td>If user is  logged in comment form should display</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-            <td>Add Comment</td>
-              <td>Once User adds comment, a message alert should display stating their comment is awaiting approval</td>
-              <td>Pass</td>
-            </tr>
-</table>
-
-#### Page Layout
-<table>  
-            <tr>
-              <th>Action</th>
-              <th>Expected Behaviour</th>
-              <th>Pass / Fail </th>
-            </tr>
-            <tr>
-              <td>Mobile - Home page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Mobile - Post Detail page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Mobile - Register page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Mobile - Login page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Mobile - Logout page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Mobile - Add a Coffee Shop page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Mobile - Edit Post page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Mobile - Search page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-</table>
-
-<table>  
-            <tr>
-              <th>Action</th>
-              <th>Expected Behaviour</th>
-              <th>Pass / Fail </th>
-            </tr>
-            <tr>
-              <td>Desktop - Home page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Desktop - Post Detail page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Desktop - Register page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Desktop - Login page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Desktop - Logout page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Desktop - Add a Coffee Shop page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Desktop - Edit Post page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-            <tr>
-              <td>Desktop - Search page</td>
-              <td>Layout is displayed correctly</td>
-              <td>Pass</td>
-            </tr>
-</table>
+| Page                 | Action                                      | Expected Result                                 | Pass/Fail | Comments                               | Corrected and Retested Result |
+| -------------------- | ------------------------------------------- | ----------------------------------------------- | --------- | -------------------------------------- | ----------------------------- |
+| **Homepage**         |                                             |                                                 |           |                                        |                               |
+|                      | Click on View Our Courses Button             | Redirection to Courses page                      | Pass      |                                        |                               |
+|                      | Enter Email to sign up for newsletter        | User is subscribed via Mailchimp                | Fail      | 					    |                               |
+|                      | Click Courses in Navbar                      | Redirection to Coaches Bios page                | Pass      |                                        |                               |
+|                      | Click Our Team in Navbar                     | Redirection to Coaches Bios page                | Pass      |                                        |                               |
+|                      | Click View Our Privacy Policy                | Privacy Policy opens in a new tab               | Fail      | Policy opens in the same tab            | Corrected		     |
+|                      | Click Facebook icon                          | Facebook business page opens in a new tab      | Pass      |                                        |                               |
+|                      | Click My Account icon when not logged in     | Register/login options display                 | Pass      |                                        |                               |
+|                      | Click My Account icon when logged in         | My Profile/logout options display               | Pass      |                                        |                               |
+|                      | Click My Profile when logged in              | My profile page displays                        | Pass      | Font color does not match site theme   | Fixed                              |
+|                      | Click Cart icon                              | User brought to cart or empty cart option displays | Pass   |                                        |                               |
+| **Courses Page**      |                                             |                                                 |           |                                        |                               |
+|                      | Click on View Course Content                 | Redirection to Courses detail page               | Pass      |                                        |                               |
+| **Our Team Page**     |                                             |                                                 |           |                                        |                               |
+|                      | Click on course in coach bio                 | Redirection to relevant course                  | Pass      |                                        |                               |
+| **Course Detail Page**|                                             |                                                 |           |                                        |                               |
+|                      | Click on purchase now button                 | Redirection to cart and course is added to cart | Pass      |                                        |                               |
+|                      | Navigate to another course and click purchase now button | Redirection to cart and second course is added to cart | Pass |                                  |                               |
+|                      | Try to add a course that is already in cart | Redirection to cart and message states course is already in cart | Pass |                                   |                               |
+|                      | Click on back to courses button              | Redirection to Courses Page                     | Pass      |                                        |                               |
+| **Shopping Cart**     |                                             |                                                 |           |                                        |                               |
+|                      | View shopping cart                           | Total cost is calculated correctly              | Pass      |                                        |                             |
+|                      | Click Remove from cart button                | Course is deleted from cart and total is recalculated | Pass |                                  |                               |
+|                      | Remove all courses from cart                 | Your cart is empty page displays                | Pass      |                                        |                               |
+|                      | Click on secure checkout button              | Redirection to Checkout Page                    | Pass      |                                        |                               |
+| **Checkout Page**     |                                             |                                                 |           |                                        |                               |
+|                      | Click complete order button without all details filled in | Page refreshes and requests field to be filled in | Pass |                                  |                               |
+|                      | Click complete order button with details completed | Redirect to Checkout Success page and user gets confirmation email | Pass |                             |                               |
+|                      | Click create an account to save details      | User is brought to sign-up page                 | Pass      |                                        |                               |
+|                      | Click login to save details                  | User is brought to sign-in page                 | Pass      |                                        |                               |
+| **Purchase course for logged in user** |                                   |                                                 |           |                                        |                               |
+|                      | Select to save billing details to profile    | Details are saved to profile                    | Pass      | BUG - details are saved with brackets and quotes surrounding | Fixed           |
+|                      | View course already purchased                | Purchase button is hidden and button saying course already purchased displays | Pass |                            |                               |
+|                      | View course already purchased                | User has opportunity to add a testimonial      | Pass      |                                        |                               |
+|                      | Purchase course                              | Course is added to My Courses in My Profile    | Pass      |                                        |                               |
+| **User leaves testimonial** |                                      |                                                 |           |                                        |                               |
+|                      | Submit testimonial                           | Message appears saying testimonial is awaiting approval | Pass |                              |                               |
+|                      | Submit testimonial                           | Testimonial form no longer appears on course  | Pass      |                                        |                               |
+|                      | View course already purchased                | User has opportunity to add a testimonial      | Pass      |                                        |                               |
+| **My Profile page**   |                                             |                                                 |           |                                        |                               |
+|                      | Update details and click update billing details button | Details are updated and confirmation message appears | Pass |                           |                               |
+|                      | Click My Courses button                      | Purchased courses and view other courses option displays | Pass |                             |                               |
+|                      | Non-logged in user enters profile URL        | User is brought to sign-in page                | Pass      |                                        |                               |
+| **Register Page**     |                                             |                                                 |           |                                        |                               |
+|                      | Enter non-matching emails                    | Form does not submit and user is asked to correct | Pass |                                  |                               |
+|                      | Enter non-matching passwords                 | Form does not submit and user is asked to correct | Pass |                                  |                               |
+|                      | Correctly complete details                   | User receives verification email               | Pass      |                                        |                               |
+|                      | Try to login without verifying email         | User is brought to page asking them to verify email | Pass |                              |                               |
+|                      | Click email verification button              | User is registered and able to login successfully | Pass |                               |                               |
+| **Login Page**        |                                             |                                                 |           |                                        |                               |
+|                      | Enter incorrect username or password        | Form does not submit and user is notified of issue | Pass |                                  |                               |
+|                      | Click forgot password                        | User is asked to enter email to reset password | Pass |                                  |                               |
+|                      | Submit email to reset password               | Page displays saying that email has been sent and user receives email | Pass |                  |                               |
+|                      | Click reset password link from email         | User has option to change password             | Pass      |                                        |                               |
+|                      | Reset password                               | Page displays showing password is reset and user can login with new password | Pass | |                          |
+|                      | Enter username and password correctly        | User is logged in                              | Pass      |                                        |                               |
+|                      | Log in                                       | User is returned to homepage                   | Pass      |                                        |                               |
+| **Logout Page**       |                                             |                                                 |           |                                        |                               |
+|                      | Click log out from Navbar or My Account icon | User is brought to sign-out confirmation page   | Pass      |                                        |                               |
+|                      | Confirm sign out                             | User is logged out                            | Pass      |                                        |                               |
+| **Admin Actions**     |                                             |                                                 |           |                                        |                               |
+|                      | Admin approves testimonial                   | Testimonial appears on course detail page      | Pass      |                                        |                               |
+|                      | Admin views course contents page             | Buttons display to edit or delete course       | Pass      |                                        |                               |
+|                      | Admin views course detail                    | Buttons display to edit or delete course       | Pass      |                                        |                               |
+|                      | Admin clicks edit course from course contents page | Admin is brought to edit course page and message notifies which course is being edited | Pass | |                           |
+|                      | Admin clicks edit course from course detail page | Admin is brought to edit course page and message notifies which course is being edited | Pass | |                           |
+|                      | Admin clicks cancel from edit course page     | Admin is brought to course contents page      | Pass      |                                        |                               |
+|                      | Admin makes edit from edit course page        | Admin is brought to course detail page, edit is made and message appears saying course updated successfully | Pass | |                     |
+|                      | Admin clicks delete course from course contents page | Confirmation page appears                 | Pass      |                                        |                               |
+|                      | Admin clicks delete course from course detail page | Confirmation page appears                 | Pass      |                                        |                               |
+|                      | Admin confirms course is to be deleted        | Admin is brought to course contents page, course is deleted and message appears confirming this | Pass | |                     |
+|                      | Admin makes edit from edit course page        | Admin is brought to course detail page, edit is made and message appears saying course updated successfully | Pass | |                     |
+|                      | Admin clicks My Account icon                  | Course Management Option displays            | Pass      |                                        |                               |
+|                      | Admin clicks Course Management option         | Admin is brought to Course Management Page   | Pass      | Font color is not fitting with overall theme of site |                 |
+|                      | Admin clicks cancel on Course Management page | Admin is brought to course contents page      | Pass      |                                        |                               |
+|                      | Admin submits a new course from Course Management page | Admin is brought to new course detail page and message appears confirming course has been added | Pass | |             |
+|                      | Non-logged in user enters delete course confirmation or delete course URL | User is brought to sign-in page | Pass | |                             |
+|                      | Non-Admin user enters delete course confirmation or delete course URL | Message displays saying only admins can do that | Pass | |                             |
+|                      | Non-logged in user enters edit course URL    | User is brought to sign-in page                | Pass      |                                        |                               |
+|                      | Non-Admin user enters edit course URL        | Message displays saying only admins can do that | Pass      |                                        |                               |
+|                      | Non-logged in user enters add course URL     | User is brought to sign-in page                | Pass      |                                        |                               |
+|                      | Non-Admin user enters add course URL         | Message displays saying only admins can do that | Pass      |                                        |                               |
 
 
+### Browser Testing
+The site was tested and was confirmed to display correctly, be responsive and comatible with the follwoing browsers:
+- [Google Chrome](https://www.google.com/chrome/)
+- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/browsers/)
+- [Microsoft Edge](https://www.microsoft.com/en-us/edge?ep=192&form=MA13L1&es=40))
+
+### Device Testing
+The site was tested and was confirmed to display correctly and be responsive on the following devices:
+- Desktop Computer
+- iPhone 14 Pro Max - during testing on this device it was discovered that the "My Account" drop-down menu was hidden behind the fotter in the collapsed navbar view. This was fixed.
+- Galaxy S8
+- IPAD Pro
+  
 ### User Testing
-The website link was provided to 3 users all of whom were able to use the site easily and navigate the options without issue. The rating system was liked by all users. Some feedback was recieved that they would like to be able to view their account details or change password. 
+The website link was provided to 2 users all of whom were able to use the site easily and navigate the site without issue. 
 
 ### Bugs
 #### Solved Bugs
-During testing an error was discovered whereby users could not sign up. This was due to formatting in the settings.py file where code was altered to fit on one line. This bug was resloved. 
+See comments section of manual testing. 
 
 #### Remaining Bugs
-When a user leaves a comment a message appears saying their comment is awaiting approval. If they refresh the page the comment is submitted again. This will be addressed in the next iteration.
+
 
 ## Features to be Implemented
-When a user logs in to comment on a post they are brought to the homepage instead of back to the page they were viewing. This will be addressed during the next iteration so that the user is returned to the page they intended to comment on.
-
-When a user chooses to edit a post there is no way to cancel except for exiting the page. This will also be addressed in the next iteration.
+It is planned to include a blog page with periodical posts giving poker tips. This will serve the purpose of providing content which can be posted on social media and via our newsletter to promote the site to potential users. This should also help improve search engine optimisation as it will give our site further authority and expertise on the sunject of poker coaching.
 
 ## LIBRARIES AND TOOLS
 The following libraries and tools were used:
