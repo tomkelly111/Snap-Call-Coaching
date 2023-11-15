@@ -168,10 +168,7 @@ While the use of agile methodologies was useful in staying on track with the pro
 - As a **user** I can **view testimonials from the homepage** so that **I can immediately see what past users thought of the site**. (Won't Have)
 - As a **site owner** I can **display books that are for sale** so that **I can sell books to users**. (Won't Have)
 
-- [Marketing](#marketing)
-  - [SEO](#seo) 
-  - [Social Media](#social-media)
-  - [Newsletter Signup](#newsletter-signup)
+
 ## MARKETING
 
 ### SEO
@@ -191,12 +188,13 @@ Based on the results we selected the keywords highlighted in yellow below:
 
 ##### HTML Implementation
 We included these keywords where appropriate throughout our HTML including:
-	- using <strong> and <emp> tags where applicable
- 	- using rel="noopener" for social media links
-  	- using keywords in our image alt attributes where appropriate
-   	- using keywords in image file names
-    	- adding keywords to the <title>
-     	- adding meta descriptions and keywords sections
+- using strong and emp tags where applicable
+- using rel="noopener" for social media links
+- using keywords in our image alt attributes where appropriate
+- using keywords in image file names
+- adding keywords to the <title>
+- adding meta descriptions and keywords sections
+  
 #### Other
 We also incldued in the final site a robots.txt and a sitemap.xml file for further SEO.
 
