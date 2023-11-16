@@ -323,7 +323,10 @@ While the use of agile methodologies was useful in staying on track with the pro
 	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/4b7bb1b3-0d91-4e84-9ecb-39a9f5670264)
 
 - #### Course Management
-	Admin users can access the Course Management page from the dropdown menu on the My Account icon. Once on the Course Management page admins can upload a new course using the COURSE Model. 
+	Admin users can access the Course Management page from the dropdown menu on the My Account icon. Once on the Course Management page admins can upload a new course using the COURSE Model. Once the new course is added the admin user is redirected t othe course detail view of that course and a message popsup saying course was successfully added.
+
+	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/bb79dea5-6109-468e-bd5a-ffa9004e957c)
+
 
 
 
