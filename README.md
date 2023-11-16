@@ -179,14 +179,16 @@ The navbar contains links to other pages including:
 - Our Team (for a view of all of our poker coaches and their bios)
 - Register and Login (if the user is not authenticated)
 - Logout (if the user is authenticated)
-  ![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/17cd9edf-3ad3-4aec-bb85-cf8ff086a5d3)
+
+![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/17cd9edf-3ad3-4aec-bb85-cf8ff086a5d3)
   
 - My Account icon - contains a drop down menu with:
 	- Register / Login if user is not authenticated
  	- My Profile / logout if user is authenticated
   	- Course Management if user is an admin
  - Cart icon - states cart empty or displays a number representing the number of items in the cart
-  ![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/38ccae4f-2b3b-4cc9-93d9-e6ac011176c4)
+
+![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/38ccae4f-2b3b-4cc9-93d9-e6ac011176c4)
 
 Each link in the navbar will be highlighted if it represents the page that the user is on.
 
