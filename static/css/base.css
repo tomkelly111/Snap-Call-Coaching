@@ -17,6 +17,14 @@ content {
   }
 
 /*NavBar*/
+.logo-image{
+    width: 200px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -10px;
+}
+
 .bg-dark {
     background-color: #3B4C31 !important;
 }
