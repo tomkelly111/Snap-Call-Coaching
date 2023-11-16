@@ -4,10 +4,10 @@
 <html lang="en">
   <head>
     {% block meta %}
-    <link rel="apple-touch-icon" sizes="180x180" href="https://snapcallcoaching.s3.eu-west-1.amazonaws.com/media/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://snapcallcoaching.s3.eu-west-1.amazonaws.com/media/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://snapcallcoaching.s3.eu-west-1.amazonaws.com/media/favicon-16x16.png">
-    <link rel="manifest" href="https://snapcallcoaching.s3.eu-west-1.amazonaws.com/media/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ MEDIA_URL }}/media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ MEDIA_URL }}/media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ MEDIA_URL }}/media/favicon-16x16.png">
+    <link rel="manifest" href="{{ MEDIA_URL }}/media/site.webmanifest">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta charset="utf-8" />
     <meta
@@ -52,7 +52,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="{% url 'home' %}">
           <div class="logo-image">
-            <img src="/media/snap-call-coaching-high-resolution-logo.png" class="img-fluid">
+            <img src="{{ MEDIA_URL }}/media/snap-call-coaching-high-resolution-logo.png" class="img-fluid">
           </div>
         </a>
         <button
