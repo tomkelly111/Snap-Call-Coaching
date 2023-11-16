@@ -84,9 +84,11 @@
       </div>
     </div>
     <div class="col-12 col-lg-3">
-      <hr>
-      <h3 class="p-2">Student Testimonials</h3>
-      <hr>
+      {% if testimonials %}
+        <hr>
+        <h3 class="p-2">Student Testimonials</h3>
+        <hr>
+      {% endif %}
         {% for testimonial in testimonials %}
         <div class="testimonials p-2 m-2 my-4">
             <p class="font-italic">{{ testimonial.review }}</p>
