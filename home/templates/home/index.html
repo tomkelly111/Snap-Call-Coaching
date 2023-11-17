@@ -1,15 +1,8 @@
 {% extends "base.html" %} {% load static %} {% block extra_css %}
-<link
-  href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
-  rel="stylesheet"
-  type="text/css"
-/>
+<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet">
 {% endblock %} {% block extra_js %}
-<script
-  type="text/javascript"
-  src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-></script>
-<script type="text/javascript">
+<script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script>
   (function ($) {
     window.fnames = new Array();
     window.ftypes = new Array();
@@ -28,11 +21,12 @@
   })(jQuery);
   var $mcj = jQuery.noConflict(true);
 </script>
-{% endblock %} 
+{% endblock %}
 {% block callout %}
 <h1>Welcome to Snap Call Coaching</h1>
 <p>
-    Here you can gain access to some of the games leading Poker Coaches and everything from poker tips for beginners to advanced poker strategy.
+  Here you can gain access to some of the games leading Poker Coaches and everything from poker tips for beginners to
+  advanced poker strategy.
 </p>
 {% endblock %}
 
@@ -43,16 +37,19 @@
     <div class="row text-center">
       <div class="col-12 col-md-6">
         <div class="rectangle-text mx-auto">
-        <section class="box-text">
+          <section class="box-text">
             <h2>
-                Here at Snap Call Coaching we provide personal <strong>poker coaches</strong> and <strong>online poker courses</strong>
-                tailored to your specific level of play.
+              Here at Snap Call Coaching we provide personal <strong>poker coaches</strong> and <strong>online poker
+                courses</strong>
+              tailored to your specific level of play.
             </h2>
-          <p>
-             If you are a complete newbie we can teach you <em>how to play poker</em> and if you are <strong>playing poker professionally</strong> we also have <em>advanced poker strategy</em> content just for you. Take a look at our courses to see which suits you best. <br>
-            <a class="btn btn-light btn-sm m-1" href="{% url 'course_contents' %}" role="button">View Our Courses</a>
-          </p>
-        </section> 
+            <p>
+              If you are a complete newbie we can teach you <em>how to play poker</em> and if you are <strong>playing
+                poker professionally</strong> we also have <em>advanced poker strategy</em> content just for you. Take a
+              look at our courses to see which suits you best. <br>
+              <a class="btn btn-light btn-sm m-1" href="{% url 'course_contents' %}" role="button">View Our Courses</a>
+            </p>
+          </section>
         </div>
       </div>
       <div class="col-12 col-md-6">
@@ -60,12 +57,8 @@
           <div class="box-text">
             <form
               action="https://herokuapp.us10.list-manage.com/subscribe/post?u=8281f899dac77992b2c1cf713&amp;id=ccebb60672&amp;f_id=00cac2e5f0"
-              method="post"
-              id="mc-embedded-subscribe-form"
-              name="mc-embedded-subscribe-form"
-              class="validate"
-              target="_blank"
-            >
+              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+              target="_blank">
               <div id="mc_embed_signup_scroll">
                 <h2 class="poker-tips">Free Poker Tips</h2>
                 <p class="signup-text">
@@ -74,61 +67,29 @@
                 </p>
                 <div class="mc-field-group">
                   <label for="mce-EMAIL">Email:</label>
-                  <input
-                    type="email"
-                    name="EMAIL"
-                    class="required email"
-                    id="mce-EMAIL"
-                    required=""
-                    placeholder="Type your email"
-                  /><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required=""
+                    placeholder="Type your email"><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
                 </div>
                 <div id="mce-responses" class="clear foot">
-                  <div
-                    class="response"
-                    id="mce-error-response"
-                    style="display: none"
-                  ></div>
-                  <div
-                    class="response"
-                    id="mce-success-response"
-                    style="display: none"
-                  ></div>
+                  <div class="response" id="mce-error-response" style="display: none"></div>
+                  <div class="response" id="mce-success-response" style="display: none"></div>
                 </div>
-                <div
-                  aria-hidden="true"
-                  style="position: absolute; left: -5000px"
-                >
+                <div aria-hidden="true" style="position: absolute; left: -5000px">
                   /* real people should not fill this in and expect good things
                   - do not remove this or risk form bot signups */
-                  <input
-                    type="text"
-                    name="b_8281f899dac77992b2c1cf713_ccebb60672"
-                    tabindex="-1"
-                    value=""
-                  />
+                  <input type="text" name="b_8281f899dac77992b2c1cf713_ccebb60672" tabindex="-1" value="">
                 </div>
                 <div class="optionalParent">
                   <div class="clear foot center-button">
-                    <input
-                      type="submit"
-                      name="subscribe"
-                      id="mc-embedded-subscribe"
-                      class="btn btn-light btn-sm"
-                      value="Subscribe"
-                    />
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-light btn-sm"
+                      value="Subscribe">
                     <p style="margin: 0px auto">
-                      <a
-                        href="http://eepurl.com/iBYOQQ"
-                        title="Mailchimp - email marketing made easy and fun"
-                        ><span
+                      <a href="http://eepurl.com/iBYOQQ" title="Mailchimp - email marketing made easy and fun"><span
                           style="
                             display: inline-block;
                             background-color: transparent;
                             border-radius: 4px;
-                          "
-                        ></span
-                      ></a>
+                          "></span></a>
                     </p>
                   </div>
                 </div>
