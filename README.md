@@ -24,10 +24,9 @@
 - [Functionality](#features)
   - [CRUD](#crud)
   - [Database & Models](#database-&-models)
-    
-- [Validation](#validation)
   
 - [Testing](#testing)
+  - [Validation](#validation)
   - [Manual Testing](#manual-testing)
   - [User Testing](#user-testing)
   - [Bugs](#bugs)
