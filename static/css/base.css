@@ -205,9 +205,10 @@ body {
     width: 100%;
     padding: 20px;
     color: #fff;
+}
 
-
-
+.overlay h2 {
+    font-size:xx-large;
 }
 
 /* Media queries */
@@ -216,7 +217,10 @@ body {
         min-height: 320px;
     }
 
-    .overlay h1,
+    .overlay h2 {
+        font-size: large;
+    }
+
     .overlay p {
         font-size: small;
 
@@ -289,9 +293,7 @@ body {
 
 .remove-item {
     display: flex;
-    /* Use flexbox */
     justify-content: center;
-    /* Center horizontally */
     align-items: center;
     font-size: 1.5em;
     height: 1em;

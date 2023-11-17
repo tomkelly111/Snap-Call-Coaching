@@ -27,9 +27,9 @@
     <div class="col-12 col-lg-6">
       <div class="m-3">
         <h2 class="font-weight-bold">{{ course.name }}</h2>
-        <hr />
+        <hr>
         <h3 class="font-weight-light">{{ course.description }}</h3>
-        <hr />
+        <hr>
         <p class="font-weight-light">{{ course.content | safe }}</p>
         <p>Course Coaches:</p>
         <ul>
@@ -66,14 +66,14 @@
               type="submit"
               class="btn btn-warning btn-sm m-1"
               value="Purchase now for €{{ course.price }}"
-            />
+            >
             {% endif %}
           </div>
           <input
             type="hidden"
             name="redirect_url"
             value="{% url 'view_bag' %}"
-          />
+          >
         </form>
         {% if request.user.is_superuser%}
         <div>
