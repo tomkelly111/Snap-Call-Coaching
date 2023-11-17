@@ -66,8 +66,10 @@ class StripeWH_Handler:
             if save_info:
                 profile.default_full_name = billing_details['name']
                 profile.default_phone_number = billing_details['phone']
-                profile.default_postcode = billing_details['address']['postal_code']
-                profile.default_town_or_city = billing_details['address']['city']
+                profile.default_postcode = (
+                    billing_details['address']['postal_code'])
+                profile.default_town_or_city = (
+                    billing_details['address']['city'])
                 profile.default_street_address1 = (
                             billing_details['address']['line1'])
                 profile.default_street_address2 = (
