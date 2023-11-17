@@ -332,6 +332,19 @@ While the use of agile methodologies was useful in staying on track with the pro
 
 
 #### Messages
+The site is equipped with messages throughout to guide the user at all stages of their experience. Examples are below:
+
+<img width="196" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/56369f38-a815-4dfe-b52e-3299f7bbe87f">
+
+<img width="284" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/13b0b5a2-6ddf-418d-9849-edaa6e533a0d">
+
+<img width="209" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/94d84dc4-55d6-4a27-93b8-8699b288d2ca">
+
+#### 404 Page
+The site has a custom 404 page that displays is the user lands on a page that does not exist. This includes a button to return home.
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/e297f979-f79d-40d8-8ef0-0004f18b383c)
+
 
 ## MARKETING
 
