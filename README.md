@@ -413,7 +413,8 @@ The below database schema was designed using [DrawSQL](https://drawsql.app/). Th
 
 ### Validation
 
-HTML - No errors were returned when code was checked with the official [W3C validator](https://validator.w3.org/), save for one (error stray end tag <div> on the Home Page) but I beleive this is incorrect and is arising due to the use of block content.
+HTML - No errors were returned when code was checked with the official [W3C validator](https://validator.w3.org/), save for:
+- On Coach Bios and Course Details page there are "No p elements in scope but a p end tag is seen" errors - i believe this is not correct and has been picked up because of the markdown being provided by django Summernote.
 
 
 CSS - No errors were returned when code was checked with the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/).
@@ -425,7 +426,17 @@ JAVASCRIPT - No errors were returned when code was checked with the official [JS
 PYTHON - No errors were shown when code was checked with the Code Institute Python Linter (https://pep8ci.herokuapp.com/) save for 2 errors in settings.py where lines were too long.
 
 
-Accessibility - I confirmed the code used is accessible by using lighthouse in devtools although at times performance dips into the 80s % but i believe this may be due to poor internet connection.
+Accessibility - I confirmed the code used is accessible by using lighthouse in devtools.
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/01264a54-18ba-4e4c-bcb7-4e8885249d30)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/eb00dac5-2ab8-433e-9f1a-dcfcba18e3a8)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/067b018d-e7cb-431e-8ff2-9e8a3663c775)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/e55cd2df-c975-4d81-ba06-786736b6de69)
+
+
 
 
 
