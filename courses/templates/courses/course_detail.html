@@ -9,6 +9,7 @@
 <div class="black-backdrop container">
   <div class="row m-2 m-sm-0 my-sm-3">
     <div class="col-12 col-lg-3">
+        <!-- checks if current course has been puchased by current user and wether they have already reviewed -->
         {% if has_purchased == True and has_reviewed != True %}
         <div class="testimonials p-2 m-2 my-4">
           <hr>
@@ -24,6 +25,7 @@
         </div>
         {% endif %}
     </div>
+    <!-- Displays course detail -->
     <div class="col-12 col-lg-6">
       <div class="m-3">
         <h2 class="font-weight-bold">{{ course.name }}</h2>
@@ -43,8 +45,8 @@
           method="POST"
         >
           {% csrf_token %}
-
           <div class="col-12 mt-5 px-0">
+            <!-- removes purchase now button if course is already purchased-->
             {% if has_purchased == True %}
             <a href="{% url 'course_contents' %}" class="btn btn-secondary btn-sm m-1">
                 <span class="icon">
@@ -75,6 +77,7 @@
             value="{% url 'view_bag' %}"
           >
         </form>
+        <!-- Checks if user is an admin and if so displays edit and delete buttons -->
         {% if request.user.is_superuser%}
         <div>
             <a class="btn btn-info btn-sm m-1" href="{% url 'edit_course' course.id %}" role="button">Edit Course</a>
@@ -83,6 +86,7 @@
         {% endif %}
       </div>
     </div>
+    <!-- If there are testimonials they are displayed here -->
     <div class="col-12 col-lg-3">
       {% if testimonials %}
         <hr>

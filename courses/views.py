@@ -28,8 +28,14 @@ def course_detail(request, course):
 
     if request.user.is_authenticated:
         user_profile = UserProfile.objects.get(user=request.user)
+        """
+        checks if coruse has been purchased by user
+        """
         if course in user_profile.purchased_courses.all():
             has_purchased = True
+            """
+            Checks if user has already left a testimonial
+            """
             if course in user_profile.reviewed_courses.all():
                 has_reviewed = True
             else:

@@ -14,4 +14,4 @@ class Coach(models.Model):
         return self.name
 
     class Meta:
-        verbose_name_plural = "Coaches"
+        verbose_name_plural = 'Coaches'

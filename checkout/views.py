@@ -68,7 +68,6 @@ def checkout(request):
                         course=course,
                     )
                     order_line_item.save()
-                    # request.user.userprofile.purchased_courses.add(course)
                 except Course.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't \
@@ -144,7 +143,9 @@ def checkout_success(request, order_number):
         profile = UserProfile.objects.get(user=request.user)
         order.user_profile = profile
         order.save()
-
+        """
+        Adds purchased courses to UserProfile
+        """
         for course_id, quantity in bag.items():
             course = Course.objects.get(id=course_id)
             profile.purchased_courses.add(course)

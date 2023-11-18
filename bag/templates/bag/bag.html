@@ -9,6 +9,7 @@
     <div class="col-0 col-sm-8">
       <div class="row">
         <div class="col">
+          <!-- Check if there are any items in bag -->
           {% if bag_items %}
           <div class="table-responsive rounded mt-3">
             <table class="table table-sm text-white">
@@ -21,7 +22,7 @@
                   <th scope="col">Remove from cart</th>
                 </tr>
               </thead>
-
+              <!-- loops through and displays bag items -->
               {% for item in bag_items %}
               <tr>
                 <td class="p-3 w-25">
@@ -79,6 +80,7 @@
             </table>
           </div>
           {% else %}
+          <!-- Display empty cart if nothing in bag -->
           <p class="lead my-5">Your cart is empty.</p>
           <a
             href="{% url 'course_contents' %}"

@@ -25,7 +25,7 @@ class Testimonials(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
-        verbose_name_plural = "Testimonials"
+        verbose_name_plural = 'Testimonials'
         ordering = ['-created_on']
 
     def __str__(self):
