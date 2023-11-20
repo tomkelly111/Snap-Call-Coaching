@@ -23,7 +23,7 @@
 
 - [Functionality](#features)
   - [CRUD](#crud)
-  - [Database & Models](#database-&-models)
+  - [Database & Models](#database-and-models)
   
 - [Testing](#testing)
   - [Validation](#validation)
@@ -33,7 +33,6 @@
   - [Features to be Implemented](#features-to-be-implemented)
   
 - [Libraries and Tools](#libraries-and-tools)
-- [Technologies Used](#technologies-used)
 - [Deployment](#deployment)
 - [Credits](#credits)
   
@@ -401,7 +400,7 @@ Users have the option of editing their own posts if they wish. Once a post is up
 #### Delete
 Users have the option to delete their own posts. If they choose to do so a modal will appear asking them to confirm the deletion. This is to ensure a post is not deleted accidentally as deleting a post cannot be undone and all associated comments will also be deleted.
 
-## DATABASE & MODELS
+## DATABASE AND MODELS
 
 The below database schema was designed using [DrawSQL](https://drawsql.app/). This was of assistance in visualising the layout of the models to be used.
 
@@ -572,9 +571,6 @@ The following libraries and tools were used:
 ## DEPLOYMENT
 
 In order to deploy the website he following steps were followed:
-
-### Create App
-- From the Heroku dashboard, create a new app;
   
 ### Attach the PostgreSQL Database (Assumed to be using ElephantSQL.com)
 - Access ElephantSQL dashboard;
@@ -585,66 +581,87 @@ In order to deploy the website he following steps were followed:
 - Check details are correct and then click "Create Instance";
 - Return to dashboard and click on Database Instance Name for your project;
 - Copy database URL;
+
+### Create App
+- From the Heroku dashboard, click create a new app;
+- Give the app a name and select region;
+- Click create app;
+- Open settings tab;
+- Create config var called "DATABASE_URL" and copy in the database URL from PostgreSQL for the value;
+
   
 ### Prepare environment and settings.py files
-- In workspace create env.py file (add to .gitignore file);
-- Add "Import os" to env.py;
-- Add a blank line, then set a DATABASE_URL variable, with the value copied from ElephantSQL as follows: os.environ["DATABASE_URL"]="<copiedURL>";
-- Add following text including your chosen secret key:  os.environ["SECRET_KEY"]="<your chosen secret key goes here between the quotes>";
-- Save the file;
-- Now to make your Django project aware of the env.py file, open settings.py and add the following below you Path import:
+- In terminal install dj_database_url and psycopg2 by typing in "pip3 install dj_database_url==0.5.0 psycopg2";
+- Update requirements.txt by typing "pip freeze > requirements.txt";
+- In settings.py add "import dj_database_url" under "import os";
+- In the Database section of settings.py comment out as follows:
 ```
-import os
-import dj_database_url
-if os.path.isfile('env.py'):
-import env
+ # DATABASES = {
+ #     'default': {
+ #         'ENGINE': 'django.db.backends.sqlite3',
+ #         'NAME': BASE_DIR / 'db.sqlite3',
+ #     }
+ # }
 ```
 
-- Further down remove secret key provided by Django and instead reference key you chose in your env.py file as follows:  SECRET_KEY = os.environ.get('SECRET_KEY');
-- Next to hook up the database scroll down to database section in settings.py;
-- In place of the Database variable add the following:
+and instead add the following while inserting your database url:
+
 ```
-  DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
- 	}
+ DATABASES = {
+     'default': dj_database_url.parse('your-database-url-here')
+ }
 ```
-- Save the file and run "python3 manage.py migrate";
+
+- In the terminal type "python3 manage.py showmigrations" to confirm you are connected to the database, if you are you should see a list of migrations with none of the checked off;
+- Type in the termina "python3 manage.py migrate" to migrate your models to the new database;
+- Type "python3 manage.py createsuperuser" and follow the steps to create a superuser for the database;
+- To prevent the databse from being exposed when we push to GitHub, revert the database text in settings.py to the following:
+```
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+```
+
+- To confirm the data in your database has been created go to the ElephantSQL page for your database and on the left select "Browser";
+- Click the table queries button and select auth_user;
+- When you click execute you should see newly created superuser details displayed, this confirms your database has been set up;
+
+### Deploying to Heroku
+- So that when site is running on Heroku we connect to Postgres and otherwise we connct to sqlite add the following if statement to settings.py:
+```
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+```
+
+- Next install gunicorn by typing "pip3 install gunicorn" into the termional;
+- Update requirements.txt by typing "pip freeze > requirements.txt";
+- create a "Procfile;
+- Add the following to the file: web: gunicorn <your app name>.wsgi;
+
+
+### Add Heroku host name to Allowed Hosts
+- In settings.py add "<your heroku app name>.heroku.com", "local host" to ALLOWED_HOSTS;
+- Save files, add commit and push to repository;
   
 ### Set up Heroku Config Vars
 - Navigate to settings tab;
 - Create confg var with key "DATABASE_URL" and for  value copy and paste your database URL (for me this was from ElephantSQL);
 - Create config var with key "SECRET_KEY" and for value add your secret key "********" which is referenced in the settings.py file in your env.py file.
 - Create config var with key "PORT" and value "8000" - click add;
-  
-### Get static and media files stored on Cloudinary
-- Create Cloudinary account;
-- At dashboard copy API Environment Variable URL;
-- Return to env.py file and add the following; os.environ["CLOUDINARY_URL"] = "<your cloudinary url minus "CLOUDINARY_URL=">";
-- Copy this value and return to Heroku;
-- Create a config var with key "CLOUDINARY_URL" and for the value add the URL you copied above;
 - Create config var with key "DISABLE_COLLECTSTATIC" and for value set as "1";
-- Return to settings.py file and to add in Cloudinary Libraries add "cloudinary_Storage" to the list of INSTALLED_APPS just above "django.contrib.staticfiles". Then add "cloudinary" underneath;
-- Towards end of settings.py add the following:
-```
-STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cludinary_storage.storage.MediaCloudinaryStorage'
-```
-
-### Tell Django where templates are stored
-- Under BASE_DIR add the following: TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates');
-- Scroll down midway and add "TEMPLATES_DIR" as the DIRS key in the TEMPALTES setting;
-
-### Add Heroku host name to Allowed Hosts
-- In settings.py add "<your heroku app name>.heroku.com", "local host" to ALLOWED_HOSTS
-
-### Tell Heroku how to run project
-- create a "Procfile;
-- Add the following to the file: web: gunicorn <your app name>.wsgi;
-- save files, add commit and push to repository;
+- Include Stripe keys (Publishable Key and Secret Key) if used in project;
 
 ### Deployment
 - Return to Heroko;
@@ -654,6 +671,152 @@ DEFAULT_FILE_STORAGE = 'cludinary_storage.storage.MediaCloudinaryStorage'
 - Scroll down and click "Deploy Branch";
 - If you like you can choose to enable automatic deploys;
 
+### Setting up AWS
+- Navigate to [aws.amazon.com](aws.amazon.com);
+- Create an AWS account;
+- On account type page select personal and fill in details, click create account;
+- Enter credit card details;
+- Answer verification questions and create account;
+- Return to [aws.amazon.com](aws.amazon.com) and access management console under my account and sign in;
+- Search for S3;
+- Create new bucket and name it e.g."heroku-app-name";
+- Select closest region;
+- For object ownership select "ACLs Enabled";
+- For Onject Ownership select Bucket Oner Preferred";
+- Other requirements can be left as default;
+- Unselect block public access;
+- Create bucket;
+- Click into newly created bucket and open the properties tab;
+- Scroll down and enable static website hosting (index hosting can be set as index.html);
+- Navigate to permissions tab;
+- Paste in the following for the CORS configuration:
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+
+- Edit policy and click policy generator;
+- select S3 policy type;
+- Add "*" to select all principals;
+- Select "Get Object" for action;
+- Copy ARN from bucket policy tab;
+- Paste into ARN box;
+- Click add statement and then generate policy;
+- Copy policy and paste into Bucket Policy editor;
+- Add "/*" onto end of resource key to allow access to all resources;
+- Save;
+- Scroll down to Access Control List and click edit;
+- Enable List for Everyone (public access) and accept warning;
+- Create a user by navigating to services menu and going to IAM;
+- Click User Groups and then Create Group;
+- Enter group name;
+- Click create group;
+- Click into newly created group and nnavigate to permissions tab;
+- Click add permissions and then create inline policy;
+- Go to JSON tab;
+- Click import policy;
+- Search S3 and select "AmazonS3FullAccess" and click import;
+- Get bucket ARN and copy to clipboard;
+- Paste in as follows including your ARN (YOUR_ARN):
+```
+"Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "YOUR_ARN",
+                "YOUR_ARN/*"
+            ]
+```
+
+- Click next and enter policy name, click create policy;
+- Navigate to User Groups and select group;
+- Click permissions tab, add permissions and attach policy;
+
+- Create a user for the group by going to Users on the left hand side;
+- Click Add User;
+- Create a User e.g. "appname-static-files-user";
+- Give the user programatic access and click next;
+- Add user to group you just created and click create user;
+- Download CSV file for access keys by:
+	- Go to IAM and select 'Users'
+	- Select the user for whom you wish to create a CSV file.
+	- Select the 'Security Credentials' tab
+	- Scroll to 'Access Keys' and click 'Create access key'
+	- Select 'Application running outside AWS', and click next
+	- On the next screen, you can leave the 'Description tag value' blank. Click 'Create Access Key'
+	- Click the 'Download .csv file' button
+
+### Connect Django to S3
+- Type the following into the CLI:
+	- pip3 install boto3
+ 	- pip3 install django-storages
+  	- pip3 freeze > requirements.txt
+- Add "storages" to installed apps in settings.py;
+- Add the following to settings.py:
+```
+if 'USE_AWS' in os.environ:
+
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'YOUR_BUCKET_NAME'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # override static and media urls in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+
+- In Heroko add these keys (AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY) to the config vars using the details from the previously downloaded csv file;
+- Also add Key = USE_AWS and Value = 1;
+- Remove DISABLE_COLLECTSTATIC variable;
+- Create file called custom_storages.py;
+- Add the following code:
+```
+from django.conf import settings
+from storages.backends.s3boto3 import S3Boto3Storage
+
+
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+
+- Git add, git commit and git push files.
+- Navigate to your S3 bucket on [aws.amazon.com](aws.amazon.com) and if everything worked there should now be a static folder containing your static files;
+- Click create folder and name it "media", inside click upload, add files and uplaod your media images, selelct grant public read access, click upload;
+
+### Verify Superuser
+- Login to your admin section of your site;
+- Click into email addresses;
+- Click into superuser email, select verified and primary - save;
 
 
 ## CREDITS
