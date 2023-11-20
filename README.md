@@ -3,7 +3,8 @@
 ...............................................
 # [Snap Call Coaching](https://snapcallcoaching-146b3f7fc4be.herokuapp.com/)
 
-<image>
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/f95cf299-1b94-4f00-919d-7dd121319b86)
+
 
 [Snap Call Coaching](https://snapcallcoaching-146b3f7fc4be.herokuapp.com/) is a website which sells online poker coaching services. It is aimed at all levels of players from absolute beginner right through to aspiring proffesionals. 
 
@@ -125,17 +126,31 @@ Agile methodoligies were used to plan and design the website. User stories were 
 - Epic 3: Coaches
 - Epic 4: Marketing
 - Epic 5: Additional Functionality
-  
+	  
+	
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/6c2f393e-9258-48b3-9d0d-e641e52c496d)
 
-<image>
+- These epics were broken down into user stories which were labeled and categorised in accordance with MoSCoW principles.
 
-These epics were broken down into user stories which were labeled and categorised in accordance with MoSCoW principles. 
-The progress of these user stories were traked via the use of the GitHub kanban-board. 
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/60cc54ab-893f-41f7-a20f-d3ba3511806e)
 
-<image>
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/dc390ca1-4a94-455c-9515-78aaa7f63edf)
 
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/97f2873b-df61-4921-b3de-b9ac62406a8d)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/300edfad-bee2-4f4f-9f7d-7f1c9a4189b1)
+
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/4792c082-c3d8-44ac-8f1e-a4d17929bce7)
+
+
+- The progress of these user stories were traked via the use of the GitHub kanban-board. 
+	
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/d03ee81a-18c1-4fb9-acb2-19aecc553d53)
+	
+	
 While the use of agile methodologies was useful in staying on track with the project, on reflections some of the user stories should have been broken down into smaller user stories to make them more manageable.
-
+	
 
 #### Must Haves (Completed)
 - As a **user** I can **view available courses** so that **choose which course suits me best**.
@@ -236,15 +251,18 @@ While the use of agile methodologies was useful in staying on track with the pro
 - #### Course Detail
 	The Course Detail page displays the content of each course taken from the COURSE Model. There is the name, brief description, a longer detailed description of the contents and links to the coaches for that course. There are also two buttons, one to return the other courses and one to purchase the course which when clicked automatically adds the course to the users cart and redirects the user to the cart page. A pop up message will also disply saying the course has been added to the cart.
 	
-	<image>
+	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/55406f04-c130-4151-bb5c-f96f3aab264a)
+
 	
 	Mobile View:
 	
-	<image>
+	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/7fee9074-6b1e-487d-9d76-f5dc594dab6c)
+
 	
-	If a user has purchased a course then there is an option to add a testimonial of their experience on the course. Once submitted via the TESTIMONIALS Model, this needs to be approvewd by a site admin after which it will appear on the other side of the screen. Once a user has submitted a testimonial the option to submit one no longer appears.
+	If a user has purchased a course then there is an option to add a testimonial of their experience on the course. Once submitted via the TESTIMONIALS Model, this needs to be approved by a site admin after which it will appear on the other side of the screen. Once a user has submitted a testimonial the option to submit one no longer appears.
 	
-	<image>
+	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/12082938-7ede-47b1-90e8-5b7abca20a0f)
+
 	
 	If the user is a site admin then buttons to edit or delete the course also display here. If the user has already purchased this course then the purchase now button is removed and instead they see the following option:
 	
@@ -321,27 +339,23 @@ While the use of agile methodologies was useful in staying on track with the pro
 	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/4b7bb1b3-0d91-4e84-9ecb-39a9f5670264)
 
 - #### Course Management
-	Admin users can access the Course Management page from the dropdown menu on the My Account icon. Once on the Course Management page admins can upload a new course using the COURSE Model. Once the new course is added the admin user is redirected t othe course detail view of that course and a message popsup saying course was successfully added.
+	Admin users can access the Course Management page from the dropdown menu on the My Account icon. Once on the Course Management page admins can upload a new course using the COURSE Model. Once the new course is added the admin user is redirected to the course detail view of that course and a message popsup saying course was successfully added.
 
 	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/bb79dea5-6109-468e-bd5a-ffa9004e957c)
 
+- #### Messages
+	The site is equipped with messages throughout to guide the user at all stages of their experience. Examples are below:
+	
+	<img width="196" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/56369f38-a815-4dfe-b52e-3299f7bbe87f">
+	
+	<img width="284" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/13b0b5a2-6ddf-418d-9849-edaa6e533a0d">
+	
+	<img width="209" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/94d84dc4-55d6-4a27-93b8-8699b288d2ca">
 
+- #### 404 Page
+	The site has a custom 404 page that displays is the user lands on a page that does not exist. This includes a button to return home.
 
-
-
-#### Messages
-The site is equipped with messages throughout to guide the user at all stages of their experience. Examples are below:
-
-<img width="196" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/56369f38-a815-4dfe-b52e-3299f7bbe87f">
-
-<img width="284" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/13b0b5a2-6ddf-418d-9849-edaa6e533a0d">
-
-<img width="209" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/94d84dc4-55d6-4a27-93b8-8699b288d2ca">
-
-#### 404 Page
-The site has a custom 404 page that displays is the user lands on a page that does not exist. This includes a button to return home.
-
-![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/e297f979-f79d-40d8-8ef0-0004f18b383c)
+	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/e297f979-f79d-40d8-8ef0-0004f18b383c)
 
 
 ## MARKETING
@@ -529,7 +543,7 @@ Accessibility - I confirmed the code used is accessible by using lighthouse in d
 The site was tested and was confirmed to display correctly, be responsive and comatible with the follwoing browsers:
 - [Google Chrome](https://www.google.com/chrome/)
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/browsers/)
-- [Microsoft Edge](https://www.microsoft.com/en-us/edge?ep=192&form=MA13L1&es=40))
+- [Microsoft Edge](https://www.microsoft.com/en-us/edge?ep=192&form=MA13L1&es=40)
 
 ### Device Testing
 The site was tested and was confirmed to display correctly and be responsive on the following devices:
