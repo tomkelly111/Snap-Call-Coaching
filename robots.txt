@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://snapcallcoaching-146b3f7fc4be.herokuapp.com/sitemap.xml
