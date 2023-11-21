@@ -117,7 +117,33 @@ The site follows a Business to Consumer model. All of its services/products are 
 
 
 ### Design
-The website was designed with simplicity in mind. There is minimal clutter with the focus being on the courses themselves. The font [Kanit](https://fonts.google.com/specimen/Kanit) was chosen as it adds to the minimalist feel of the site while also haveing a computational / mathematical theme which compliments our course content. [It is a combination of concepts, mixing a Humanist Sans Serif motif with the curves of Capsulated Geometric styles that makes it suitable for various uses, contemporary and futuristic](https://fonts.google.com/specimen/Kanit/about). For the color design, Green was chosen as it is reflective of the green felt of a poker table. The greys and blacks compliment the dark green color and were taken from palettes available on [Color Space](https://mycolor.space/). The logo was designed using [Logo.com](https://logo.com/).
+The website was designed with simplicity in mind. There is minimal clutter with the focus being on the courses themselves. The font [Kanit](https://fonts.google.com/specimen/Kanit) was chosen as it adds to the minimalist feel of the site while also haveing a computational / mathematical theme which compliments our course content. [It is a combination of concepts, mixing a Humanist Sans Serif motif with the curves of Capsulated Geometric styles that makes it suitable for various uses, contemporary and futuristic](https://fonts.google.com/specimen/Kanit/about). For the color design, Green was chosen as it is reflective of the green felt of a poker table. The greys and blacks compliment the dark green color and were taken from palettes available on [Color Space](https://mycolor.space/). 
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/24fc708d-0103-4820-8cdc-2e6b414a341b)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/ef77f427-9be5-44a6-ad03-ad05a67f9c13)
+
+The logo was designed using [Logo.com](https://logo.com/).
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/282c32a5-ec2c-4052-8a5b-c6e17e442ff6)
+
+
+#### Wireframes
+Wireframes were created using [https://app.moqups.com/](https://app.moqups.com/).
+
+- Landing Page
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/85436c34-1379-495f-bae5-65dff73f6a78)
+
+- Courses
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/9e5f35c9-4483-4fde-85ab-9bce0bd7ad86)
+
+- Course Detail
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/0ef0a154-ab29-4a6f-97b5-737308287a25)
+
+- Our Team
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/93bd9cd1-074b-4ade-9f35-f3e06dc2c1d7)
+
+	
 
 ### User Stories
 Agile methodoligies were used to plan and design the website. User stories were created using issues on GitHub and were added  to five epics (milestones):
