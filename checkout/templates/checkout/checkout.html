@@ -44,7 +44,7 @@
                             <p class="my-0"><strong>{{ item.course.name }}</strong></p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small">${{ item.course.price }}</p>
+                            <p class="my-0 small">€{{ item.course.price }}</p>
                         </div>
                     </div>
                     {% endfor %}
@@ -55,7 +55,7 @@
                             <p class="my-0">Order Total:</p>
                         </div>
                         <div class="col-3">
-                            <p class="my-0"><strong>${{ total | floatformat:2 }}</strong></p>
+                            <p class="my-0"><strong>€{{ total | floatformat:2 }}</strong></p>
                         </div>
                     </div>
                     <hr>
@@ -118,7 +118,7 @@
                                 <span class="icon">
                                     <i class="fas fa-exclamation-circle"></i>
                                 </span>
-                                <span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
+                                <span>Your card will be charged <strong>€{{ total|floatformat:2 }}</strong></span>
                             </p>
                         </div>
                     </form>
