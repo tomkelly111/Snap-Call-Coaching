@@ -22,9 +22,7 @@
   - [Social Media](#social-media)
   - [Newsletter Signup](#newsletter-signup)
 
-- [Functionality](#features)
-  - [CRUD](#crud)
-  - [Database & Models](#database-and-models)
+- [Database & Models](#database-and-models)
   
 - [Testing](#testing)
   - [Validation](#validation)
@@ -43,7 +41,7 @@
 
 
 ### Goal 
-The goal of the website is to sell online poker coaching courses to all level of players. Courses range from absolute beginner right through to aspiring proffessionals. Price ranges for the courses reflect the level of expertise covered. 
+The goal of the website is to sell online poker coaching courses to all level of players. Courses range from absolute beginner right through to aspiring proffessionals. Price ranges for the courses reflect the level of expertise covered. The courses are structured so that as a user completes the beginners course they will then have the expertise to undertake the intermediate course etc. It is hoped that user will enjoy and benefit from the course and so be encouraged to purchase more advanced courses over time. Contents of courses are also set out so that more advanced players can skip beginner courses and start at whichever course suits their abilities.
 
 #### Business Plan
 The site follows a Business to Consumer model. All of its services/products are online. The site sells online courses for a once off payment and some of the more advanced courses include one-on-one coaching sessions as part of the package.
@@ -175,8 +173,7 @@ Agile methodoligies were used to plan and design the website. User stories were 
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/d03ee81a-18c1-4fb9-acb2-19aecc553d53)
 	
 	
-While the use of agile methodologies was useful in staying on track with the project, on reflections some of the user stories should have been broken down into smaller user stories to make them more manageable.
-	
+While the use of agile methodologies was useful in staying on track with the project, on reflections some of the user stories should have been broken down into smaller user stories to make them more manageable.	
 
 #### Must Haves (Completed)
 - As a **user** I can **view available courses** so that **choose which course suits me best**.
@@ -206,6 +203,21 @@ While the use of agile methodologies was useful in staying on track with the pro
 - As a **admin** I can **create blog posts** so that **i can give site users tips on playing poker and content can be used for marketing purposes**. (Could Have)
 - As a **user** I can **view testimonials from the homepage** so that **I can immediately see what past users thought of the site**. (Won't Have)
 - As a **site owner** I can **display books that are for sale** so that **I can sell books to users**. (Won't Have)
+
+
+
+Each user story was assigned tasks in order to complete it, these were set out as follows:
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/04650cf6-d67c-4281-bc13-95772a4c63e4)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/6f79604f-cdcc-4f4c-aa95-659bea0280be)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/c9c76d6b-aec2-4177-bfb7-0f1adf08eb18)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/25d63893-274d-4811-bce1-313d1d077a86)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/e9f49bc3-7847-4089-b981-b7b835b6fd56)
+
 
 
 ### Features
@@ -424,22 +436,6 @@ As part of our marketing we created a Facebook Business Page. It is hoped that i
 Similar to other businesses in this market we have implmented a sign up form on our homepage. This was done using [Mail Chimp](https://mailchimp.com/). This offers users the ability to sign up to our newsletter which will be sent weekly. The newsletter will offer free poker tips and strategy to all that sign up. It is hoped that this sign up form will allow us to build a strong userbase of dedicated poker players. The goal is to then use these newsletters to promote discounts or sales that are occuring on the site in the hope of increasing our sales.
 
 
-
-
-## Functionality
-### CRUD
-#### Create
-Users can add a coffee shop to the site. This is done via the use of a crispy form. They also have the option to add comments to a post which also uses crispy forms. Once this is done the post or comment requires approval from the administrator. This is to ensure the quality of the content that is posted to the site.
-
-#### Read
-Once a post is made it can be viewed on the homepage and if clicked into it can be seen in more detail. Here any comments that have been added can also be viewed.
-
-#### Update
-Users have the option of editing their own posts if they wish. Once a post is updated it requires approval once again. The reasoning for this is to prevent a user's post being approved and then them being able to edit it to say something which is not keeping inline with the sites ethos. 
-
-#### Delete
-Users have the option to delete their own posts. If they choose to do so a modal will appear asking them to confirm the deletion. This is to ensure a post is not deleted accidentally as deleting a post cannot be undone and all associated comments will also be deleted.
-
 ## DATABASE AND MODELS
 
 The below database schema was designed using [DrawSQL](https://drawsql.app/). This was of assistance in visualising the layout of the models to be used.
@@ -461,7 +457,7 @@ CSS - No errors were returned when code was checked with the official [(Jigsaw) 
 JAVASCRIPT - No errors were returned when code was checked with the official [JS Hint validator](https://jshint.com/).
 
 
-PYTHON - No errors were shown when code was checked with the Code Institute Python Linter (https://pep8ci.herokuapp.com/) save for 2 errors in settings.py where lines were too long.
+PYTHON - No errors were shown when code was checked with the Code Institute Python Linter (https://pep8ci.herokuapp.com/).
 
 
 Accessibility - I confirmed the code used is accessible by using lighthouse in devtools.
@@ -586,7 +582,7 @@ The website link was provided to 2 users all of whom were able to use the site e
 See comments section of manual testing. 
 
 #### Remaining Bugs
-
+None known.
 
 ## Features to be Implemented
 It is planned to include a blog page with periodical posts giving poker tips. This will serve the purpose of providing content which can be posted on social media and via our newsletter to promote the site to potential users. This should also help improve search engine optimisation as it will give our site further authority and expertise on the subject of poker coaching.
@@ -594,19 +590,23 @@ It is planned to include a blog page with periodical posts giving poker tips. Th
 ## LIBRARIES AND TOOLS
 The following libraries and tools were used:
 - Django
-  - Allauth
-  - Messages
-  - Crispy Forms
+  - Allauth - For user accounts
+  - Messages - For success / error / infor messages and confirmations
+  - Crispy Forms - for all forms e.g. Add Course, Update billing details
+  - Summernote - for styling of text via the admin panel
+  - Countries - to select a country
 - Python
 - HTML & CSS
 - Javascript
 - Bootstrap
-- Cloudinary
 - Font Awesome
 - Google Fonts
-- Elephant SQL
-- gunicorn
-- whitenoise  
+- Elephant SQL - database
+- Pillow - handling images
+- gunicorn - running Python web applications
+- Stripe - for receiving payments
+- Amazon AWS - for storing static files
+- [https://www.simpleimageresizer.com/](https://www.simpleimageresizer.com/) - for resizing images
 
 ## DEPLOYMENT
 
@@ -858,27 +858,43 @@ class MediaStorage(S3Boto3Storage):
 - Click into email addresses;
 - Click into superuser email, select verified and primary - save;
 
+### Forking and Cloning
+
+- #### Forking
+- In order to fork the repository navigate to the top of the page and where it says "Fork" click the drop down menu. Here click "Create new Fork". Name the new repository and click "Create Fork". You will now have your own copy of the repository saved to your own github account to which you can make your own changes.
+
+- #### Cloning
+- In order to clone the site locally navigate to where it says "Code" above the repositary. Click the dropdown menu and select the local tab. Then select HTTPS. Copy the URL (https://github.com/tomkelly111/Snap-Call-Coaching.git). In your CLI type:
+- ```git clone https://github.com/tomkelly111/The-Card-Club.git``` and hit enter.
+
+- #### ENV.PY
+- You will need to create an env.py file and add the relevant key values:
+```
+import os
+
+os.environ["DATABASE_URL"] = "*****"
+os.environ["SECRET_KEY"] = "*****"
+os.environ["STRIPE_PUBLIC_KEY"] = "*****"
+os.environ["STRIPE_SECRET_KEY"] = "*****"
+os.environ["STRIPE_WH_KEY"] = "*****"
+os.environ["EMAIL_HOST_PASS"] = "*****"
+os.environ["EMAIL_HOST_USER"] = "*****"
+os.environ["AWS_ACCESS_KEY_ID"] = "*****"
+os.environ["AWS_ACCESS_KEY_ID"] = "*****"
+os.environ["AWS_SECRET_ACCESS_KEY"] = "*****"
+```
 
 ## CREDITS
-Code and direction for the Search Function was taken from this [tutorial](https://www.youtube.com/watch?v=AGtae4L5Bb) provided by Codemy.com.
-
-Code and direction for the Javascript and Modal function was taken from the Code Institute's Django Blog Webinar.
-
-Code and direction for the messages feature was taken from the Code Institute's I think therefor I Blog module.
-
-Code and Direction for part of admin.py file were provided by users Francisco and catavaran on [Stack OverFlow](https://stackoverflow.com/questions/28512710/how-to-add-custom-search-box-in-django-admin).
-
-Inspiration for the Star Rating feature was taken from Arron Beale's "number of guests" feature in his Portfolio Project 4 [The Diplomat](https://github.com/ArronBeale/CI_PP4_the_diplomat)
-
-Code and direction for the comment model and views were taken from [codepiep](https://www.youtube.com/watch?v=ScABStHY8cc&t=5s).
-
-All photographs were provided by [Pexels](https://www.pexels.com/) and minified with https://app.imagify.io/
+- Code and direction for the Order, OrderLineItems and UserProfile models was followed along with from the Code Institute's E-commerce Boutique Ado site.
+- All photographs were provided by [Pexels](https://www.pexels.com/)
+- Instruction on how to make navbar links "active" was provided by Will Howell on [Stack Overflow](https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar#:~:text=You%20can%20get%20the%20name,class%20if%20the%20url%20matches.&text=I%20had%20a%20simialr%20question,be%20populated%20by%20each%20page)
+- Instruction on adding the logo was provided by user Dragosct on [Github](https://github.com/creativetimofficial/material-kit/issues/107)
 
 Thanks to:
 - Code Institute for providing the Gitpod template.
 - Dick Vlaanderen for his mentoring support
 - The Code Institute Tutor Support 
-
+- @Karolis, @Nils and @Szilvi for their support on Slack
 		
 
 
