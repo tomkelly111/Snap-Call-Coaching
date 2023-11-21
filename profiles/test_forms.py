@@ -4,6 +4,10 @@ from .forms import UserProfileForm
 
 class TestUserProfileForm(TestCase):
 
+    """
+    test that all fields which are non required
+    fields are not required
+    """
     def test_fields_not_required(self):
         form = UserProfileForm({'default_full_name': '',
                                 'default_phone_number': '',
@@ -15,6 +19,7 @@ class TestUserProfileForm(TestCase):
                                 'default_county': ''})
         self.assertTrue(form.is_valid())
 
+    """tests that all correct fields are present in form """
     def test_fields_are_explicit_in_form(self):
         form = UserProfileForm()
         self.assertEqual(form.Meta.exclude,

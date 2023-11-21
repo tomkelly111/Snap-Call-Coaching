@@ -3,7 +3,7 @@ from .forms import CourseForm, TestimonialsForm
 
 
 class TestCourseForm(TestCase):
-
+    """test that required fields are required """
     def test_fields_are_required(self):
         form = CourseForm({'name': '',
                            'description': '',
@@ -27,6 +27,7 @@ class TestCourseForm(TestCase):
         self.assertEqual(form.errors['order']
                          [0], 'This field is required.')
 
+    """test that non required fields are not required """
     def test_fields_not_required(self):
         form = CourseForm({'name': 'test',
                            'description': 'test',
@@ -36,6 +37,7 @@ class TestCourseForm(TestCase):
                            'featured_image': ''})
         self.assertTrue(form.is_valid())
 
+    """tests that all fields are present in form """
     def test_fields_are_explicit_in_form(self):
         form = CourseForm()
         self.assertEqual(form.Meta.fields,
@@ -44,6 +46,7 @@ class TestCourseForm(TestCase):
 
 class TestTestimonialsForm(TestCase):
 
+    """test that all fields are required """
     def test_fields_are_required(self):
         form = TestimonialsForm({'name': '',
                                  'review': ''})
@@ -55,6 +58,7 @@ class TestTestimonialsForm(TestCase):
         self.assertEqual(form.errors['review']
                          [0], 'This field is required.')
 
+    """tests that all fields are present in form """
     def test_fields_are_explicit_in_form(self):
         form = TestimonialsForm()
         self.assertEqual(form.Meta.fields,

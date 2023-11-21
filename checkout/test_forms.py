@@ -4,6 +4,7 @@ from .forms import OrderForm
 
 class TestOrderForm(TestCase):
 
+    """test that required fields are required """
     def test_fields_are_required(self):
         form = OrderForm({'full_name': '',
                           'email': '',
@@ -31,6 +32,7 @@ class TestOrderForm(TestCase):
         self.assertEqual(form.errors['country']
                          [0], 'This field is required.')
 
+    """test that non required fields are not required """
     def test_fields_not_required(self):
         form = OrderForm({'full_name': 'John Smith',
                           'email': 'john@mail.com',
@@ -43,6 +45,7 @@ class TestOrderForm(TestCase):
                           'county': ''})
         self.assertTrue(form.is_valid())
 
+    """tests that all fields are present in form """
     def test_fields_are_explicit_in_form(self):
         form = OrderForm()
         self.assertEqual(form.Meta.fields,
