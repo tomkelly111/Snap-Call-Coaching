@@ -68,7 +68,7 @@ class TestViews(TestCase):
         self.assertRedirects(response,
                              f'/accounts/login/?next=/'
                              f'courses/delete/{course.id}')
-    
+
     """
     Checks that a logged in user that accesses the add url
     is redirected to the homepage
