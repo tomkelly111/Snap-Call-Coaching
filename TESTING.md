@@ -20,18 +20,17 @@ No errors were returned when code was checked with the official [W3C validator](
 | **Homepage**         | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/e5204b0d-3e0a-4ea7-b639-7adf71f8cb6a) | No Errors  |
 | **Courses**         | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/a4dbc9ab-3a73-4b9c-8b32-4c4453072244) | No Errors  |
 | **Our Team**         | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/35ab86bb-5752-467a-aa56-4d021ff6caf1) | Errors due to Summernote markdown  |
-| **Sign Up**         | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/7e35c0ba-27ab-49af-8a46-2f951154ad9f) | Warning due to h1 in callout  |
-| **Login**         | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/0c15fa93-9e24-4665-84ce-d05dd60eda9a) | Warning due to h1 in callout  |
-| **Profile**         | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/9e427b6f-f376-4b6a-8cbf-18367071c75f) | Warning due to h1 in callout, Cannot resolve Info issue as trailing slash does not appear in profile.html or when viewing page source. Possible cause is to do with redirect where W3C is not a logged in user so will review ny direct input below  |
+| **Sign Up**         | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/342aca66-30be-4324-a89c-21cbcecb98b0) | No Errors |
+| **Login**         | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/da095b71-aca7-4302-87b8-2b472881ee5a) | No Errors  |
 | **Profile (via Direct Input)**    | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/9d50669d-796a-4390-b827-649da96ebfb5) | No Errors  |
 | **Shopping Cart**    | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/5f5c59e3-544e-48da-9304-afbd86c9b9f6) | No Errors  |
 | **Course Detail**    | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/fcd805f7-c52a-4ab6-989e-c98a74c73b17) | Errors due to Summernote markdown  |
-| **Password Reset**   | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/7b763fc4-d5c1-4431-a52b-d875b1f0ec77) | Warning due to h1 in callout  |
+| **Password Reset**   | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/d15cec52-93f5-4dd3-a1fa-23f4b2068fff) | No Errors  |
 | **Checkout (via Dicrect Input)** | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/a01ce906-cc27-421e-8f37-829444f49154) | Warning due to h1 in callout and empty h1 in loading spinner  |
 | **Checkout Success (via Dicrect Input)** | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/acfd2c18-d934-4a28-a971-39517d39c4c0) | No Errors  |
 | **Add Course (via Dicrect Input)** | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/574dde69-84d7-44ac-9600-c470f0617054) | No Errors  |
-| **Edit Course (via Direct Input)** | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/7d5c0a7a-b3af-43d1-b9e2-1ebfed836851) | H1 warning due to empty Callout  |
-| **Delete Confirmation (via Direct Input)** | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/13a30666-826e-43f8-b7ab-094c4079a338) | H1 warning due to empty Callout  |
+| **Edit Course (via Direct Input)** | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/b7c24369-b516-45d4-946d-650b3ca94f5b) | No Errors  |
+| **Delete Confirmation (via Direct Input)** | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/634edd23-47fe-4284-bd6d-a8eb288d7b6e) | No Errors  |
 
 
 
@@ -109,6 +108,36 @@ I confirmed the code used is accessible by using lighthouse in devtools. While i
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/067b018d-e7cb-431e-8ff2-9e8a3663c775)
 
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/e55cd2df-c975-4d81-ba06-786736b6de69)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/f9507614-216e-47a8-946f-27e21f090445)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/203803ef-6bdf-4d32-9779-16eae39e5557)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/10d1c651-5c32-4d84-ae37-5094a59b6f33)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/7288e5a3-3c0f-4c00-8f8d-82328f10a310)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/83d3f731-6461-425f-a7c2-20bbf2412b3c)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/9f15a3f3-6892-4ddd-bd13-328bc3d60a9a)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/2eb5945e-943e-4002-af3a-bb0d3ea44324)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/3d271be4-1e9f-4ca8-bac5-642a90397a8c)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/7d57c8c8-5afd-43b0-bc27-666e53a11058)
+
+![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/0ffaaf6d-4db3-4959-8b14-6fc00295c291)
+
+
+
+
+
+
+
+
+
+
 
 
 
