@@ -68,3 +68,24 @@ class TestViews(TestCase):
         self.assertRedirects(response,
                              f'/accounts/login/?next=/'
                              f'courses/delete/{course.id}')
+    
+    """
+    Checks that a logged in user that accesses the add url
+    is redirected to the homepage
+    """
+    def test_add_course_for_loggedin_user(self):
+        self.user = User.objects.create_user(username='testuser',
+                                             password='12345')
+        login = self.client.login(username='testuser', password='12345')
+        response = self.client.get(f'/courses/add/')
+        self.assertRedirects(response, '/')
+
+    """
+    Tests if anonymous user is redirected to login
+    when they try to access the add course page
+    """
+    def test_add_course_for_anonymous_user(self):
+        response = self.client.get('/courses/add/')
+        self.assertRedirects(response,
+                             f'/accounts/login/?next=/'
+                             f'courses/add/')
