@@ -5,6 +5,28 @@ from .models import Course
 
 class TestViews(TestCase):
     """
+    Test users can access courses page
+    """
+    def test_course_detail_view(self):
+        course = Course.objects.create(name='test',
+                                       description='test',
+                                       content='test',
+                                       price=100,
+                                       order=1,
+                                       featured_image='placeholder')
+        response = self.client.get(f'/courses/course-detail/{course.name}/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'courses/course_detail.html')
+
+    """
+    Test users can access course detail page
+    """
+    def test_course_view(self):
+        response = self.client.get('/courses/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'courses/course_contents.html')
+
+    """
     Checks that a logged in user that accesses the edit url
     is redirected to the homepage
     """
