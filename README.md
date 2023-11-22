@@ -25,11 +25,6 @@
 - [Database & Models](#database-and-models)
   
 - [Testing](#testing)
-  - [Validation](#validation)
-  - [Manual Testing](#manual-testing)
-  - [User Testing](#user-testing)
-  - [Bugs](#bugs)
-  - [Features to be Implemented](#features-to-be-implemented)
   
 - [Libraries and Tools](#libraries-and-tools)
 - [Deployment](#deployment)
@@ -395,6 +390,11 @@ Each user story was assigned tasks in order to complete it, these were set out a
 
 	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/e297f979-f79d-40d8-8ef0-0004f18b383c)
 
+- #### Stripe
+	[Stripe](https://stripe.com/ie) is used in order to take payments from customers on the site. This was implemented following along with Code Institute's Boutique Ado walkthrough Project. The site also implements webhooks which assist with:
+	- sending confirmation emails
+ 	- updating users profile details
+  	- completing orders and adding them to the database if there is an issue with for example user's browser crashing
 
 ## MARKETING
 
@@ -444,7 +444,7 @@ The below database schema was designed using [DrawSQL](https://drawsql.app/). Th
 
 
 ## TESTING
-For testing writeup please view (TESTING.md)[TESTING.MD]
+For testing writeup please view [TESTING.md](TESTING.md).
 
 
 ## LIBRARIES AND TOOLS
@@ -466,6 +466,7 @@ The following libraries and tools were used:
 - gunicorn - running Python web applications
 - Stripe - for receiving payments
 - Amazon AWS - for storing static files
+- GMAIL API - for sending confirmation emails
 - [https://www.simpleimageresizer.com/](https://www.simpleimageresizer.com/) - for resizing images
 
 ## DEPLOYMENT
