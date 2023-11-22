@@ -349,7 +349,7 @@ footer {
 
 /* Allauth form formatting */
 
-.allauth-form-inner-content p, h1, a {
+.allauth-form-inner-content p, h1, h2, a {
     margin-top: 1.5rem;
     /* mt-4 */
     color: #ffffff
