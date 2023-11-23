@@ -3,9 +3,8 @@
 - [Manual Testing](#manual-testing)
 - [Browser Testing](#browser-testing)
 - [Device Testing](#device-testing)
-- [Automated Testing](#automated-testing)
+- [Unit Testing](#unit-testing)
 - [Bugs](#bugs)
-- [Features to be Implemented](#features-to-be-implemented)
 
 Return back to [README.md](README.md).
 
@@ -48,6 +47,8 @@ No errors were returned when code was checked with the official [JS Hint validat
 | File                 | Result                                      | Comment                                 |
 | -------------------- | ------------------------------------------- | --------------------------------------- | 
 | **stripe_elements.js** | ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/12bb22e1-c0e9-46a9-a5c5-b95448e3dbf4) | No Errors  |
+| **bag.html javascript** | <img width="782" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/930a21fa-daa1-4cb6-9aa6-d60ade1d5813"> | No Errors  |
+
 
 
 ## PYTHON
@@ -99,7 +100,7 @@ No errors were shown when code was checked with the Code Institute Python Linter
 
 
 ## Accessibility
-I confirmed the code used is accessible by using lighthouse in devtools. While initially there was a lower score for performance and accessibility I was able to improve these by minimising images and adding aria labels where appropriate.
+I confirmed the code used is accessible by using lighthouse in devtools. While initially there was a lower score for performance and accessibility I was able to improve these by minimising images and adding aria labels where appropriate. It was also necessary to change the font color of placeholder text.
 
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/01264a54-18ba-4e4c-bcb7-4e8885249d30)
 
@@ -117,7 +118,7 @@ I confirmed the code used is accessible by using lighthouse in devtools. While i
 
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/7288e5a3-3c0f-4c00-8f8d-82328f10a310)
 
-![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/83d3f731-6461-425f-a7c2-20bbf2412b3c)
+<img width="600" alt="image" src="https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/73b13d01-3a81-4c90-bfa9-e40adcff7668">
 
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/9f15a3f3-6892-4ddd-bd13-328bc3d60a9a)
 
@@ -239,12 +240,12 @@ The site was tested and was confirmed to display correctly, be responsive and co
 # Device Testing
 The site was tested and was confirmed to display correctly and be responsive on the following devices:
 - Desktop Computer
-- iPhone 14 Pro Max - during testing on this device it was discovered that the "My Account" drop-down menu was hidden behind the fotter in the collapsed navbar view. This was fixed.
+- iPhone 14 Pro Max - during testing on this device it was discovered that the "My Account" drop-down menu was hidden behind the footer in the collapsed navbar view. This was fixed.
 - Galaxy S8
 - IPAD Pro
 
-# Automated Testing
-Due to time constraints limited automated testing has been carried out. This was done using Django's built in unit testing framework. After testing was complete I ran a coverage test and the results were as follows:
+# Unit Testing
+Due to time constraints limited unit testing has been carried out. This was done using Django's built in unit testing framework. After testing was complete I ran a coverage test and the results were as follows:
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/42cb3983-9729-49aa-a55e-9fc0b7abf72d)
 
 The tests carried out were as follows:
