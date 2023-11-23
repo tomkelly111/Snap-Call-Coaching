@@ -232,7 +232,7 @@ I confirmed the code used is accessible by using lighthouse in devtools. While i
 
 
 # Browser Testing
-The site was tested and was confirmed to display correctly, be responsive and comatible with the following browsers:
+The site was tested and was confirmed to display correctly, be responsive and compatible with the following browsers:
 - [Google Chrome](https://www.google.com/chrome/)
 - [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/browsers/)
 - [Microsoft Edge](https://www.microsoft.com/en-us/edge?ep=192&form=MA13L1&es=40)
