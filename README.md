@@ -6,7 +6,7 @@
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/f95cf299-1b94-4f00-919d-7dd121319b86)
 
 
-[Snap Call Coaching](https://snapcallcoaching-146b3f7fc4be.herokuapp.com/) is a website which sells online poker coaching services. It is aimed at all levels of players from absolute beginner right through to aspiring proffesionals. 
+[Snap Call Coaching](https://snapcallcoaching-146b3f7fc4be.herokuapp.com/) is a website which sells online poker coaching services. It is aimed at all levels of players from absolute beginner right through to aspiring profesionals. 
 
 
 ## Table of content
@@ -36,7 +36,7 @@
 
 
 ### Goal 
-The goal of the website is to sell online poker coaching courses to all level of players. Courses range from absolute beginner right through to aspiring proffessionals. Price ranges for the courses reflect the level of expertise covered. The courses are structured so that as a user completes the beginners course they will then have the expertise to undertake the intermediate course etc. It is hoped that user will enjoy and benefit from the course and so be encouraged to purchase more advanced courses over time. Contents of courses are also set out so that more advanced players can skip beginner courses and start at whichever course suits their abilities.
+The goal of the website is to sell online poker coaching courses to all level of players. Courses range from absolute beginner right through to aspiring professionals. Price ranges for the courses reflect the level of expertise covered. The courses are structured so that as a user completes the beginners course they will then have the expertise to undertake the intermediate course etc. It is hoped that user will enjoy and benefit from the course and so be encouraged to purchase more advanced courses over time. Contents of courses are also set out so that more advanced players can skip beginner courses and start at whichever course suits their abilities.
 
 #### Business Plan
 The site follows a Business to Consumer model. All of its services/products are online. The site sells online courses for a once off payment and some of the more advanced courses include one-on-one coaching sessions as part of the package.
@@ -80,7 +80,7 @@ The site follows a Business to Consumer model. All of its services/products are 
   - Courses will be made available at Beginner, intermediate and advance level. This will be clearly set out and language used will be tailored to suit the target demographic of each course.
     
 - How can we demonstrate expertise, authoritativeness and trustworthiness in our content?  
-  - The site will contain profiles of the coaches who will all be professional poker players. Coach bios will list their experience and accoaldes. This will give them the authority and expertise to teach.
+  - The site will contain profiles of the coaches who will all be professional poker players. Coach bios will list their experience and accolades. This will give them the authority and expertise to teach.
   
 - Would there be other pages within the site which we could link to from a chosen page?
   - Each course will list the coaches available and contain links to each coaches profile. Each coaches bio will list the the course they coach on and link to those courses. 
@@ -88,13 +88,13 @@ The site follows a Business to Consumer model. All of its services/products are 
 ##### In determining the marketing of the site these questions were considered and answered:
 
 - Who are our users?
-  - Given the profile of poker poker players in general our users are likely to be mostly males between the ages of 18 - 45
+  - Given the profile of poker players in general our users are likely to be mostly males between the ages of 18 - 45
     
 - Which online platforms would we find lots of our users?
   - Many of our users would be frequent users of the larger poker playing sites such as PokerStars, GGPoker and 888Poker. They will also browse online forums such as twoplustwo and r/poker on reddit. 
   
 - Would our users use social media? If yes, which platforms do you think you would find them on?
-  - Typically our users would use YouTube to view poker content as well      as a smaller markety on instagram and tiktok.
+  - Typically our users would use YouTube to view poker content as well      as a smaller market on instagram and tiktok.
 
 - What do our users need? Could we meet that need with useful content? If yes, how could we best deliver that content to them?
   - Yes, our users would be looking to learn better poker skills. This can be provided via our online training courses.
@@ -104,13 +104,13 @@ The site follows a Business to Consumer model. All of its services/products are 
     
 - What are the goals of our business? Which marketing strategies would offer the best ways to meet those goals?
   -  The goal of the business is to sell our courses. The best marketing strategy for this starting out (for budget reasons) would be free/ low cost. It is intended to use our newsletter service as a means of promotion. Once we have a bigger user base and more budget       it is intended to market our site on the various poker forums and poker videos appearing on YouTube.
-  -  As the site grows it maybe possibel to approach popular proffessional players with whom we can pay to promote our courses on their social media.
-  -  Additionally, we will include a feature where users who have purchased a course can leave a testimonial as to their experience with the content. This will serve        as a reasurance to prospective purchasers that we profide high quality content. 
+  -  As the site grows it maybe possible to approach popular professional players with whom we can pay to promote our courses on their social media.
+  -  Additionally, we will include a feature where users who have purchased a course can leave a testimonial as to their experience with the content. This will serve        as a reasurance to prospective purchasers that we provide high quality content. 
 
 
 
 ### Design
-The website was designed with simplicity in mind. There is minimal clutter with the focus being on the courses themselves. The font [Kanit](https://fonts.google.com/specimen/Kanit) was chosen as it adds to the minimalist feel of the site while also haveing a computational / mathematical theme which compliments our course content. [It is a combination of concepts, mixing a Humanist Sans Serif motif with the curves of Capsulated Geometric styles that makes it suitable for various uses, contemporary and futuristic](https://fonts.google.com/specimen/Kanit/about). For the color design, Green was chosen as it is reflective of the green felt of a poker table. The greys and blacks compliment the dark green color and were taken from palettes available on [Color Space](https://mycolor.space/). 
+The website was designed with simplicity in mind. There is minimal clutter with the focus being on the courses themselves. The font [Kanit](https://fonts.google.com/specimen/Kanit) was chosen as it adds to the minimalist feel of the site while also having a computational / mathematical theme which compliments our course content. [It is a combination of concepts, mixing a Humanist Sans Serif motif with the curves of Capsulated Geometric styles that makes it suitable for various uses, contemporary and futuristic](https://fonts.google.com/specimen/Kanit/about). For the color design, Green was chosen as it is reflective of the green felt of a poker table. The greys and blacks compliment the dark green color and were taken from palettes available on [Color Space](https://mycolor.space/). 
 
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/24fc708d-0103-4820-8cdc-2e6b414a341b)
 
@@ -163,12 +163,12 @@ Agile methodoligies were used to plan and design the website. User stories were 
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/4792c082-c3d8-44ac-8f1e-a4d17929bce7)
 
 
-- The progress of these user stories were traked via the use of the GitHub kanban-board. 
+- The progress of these user stories were tracked via the use of the GitHub kanban-board. 
 	
 ![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/d03ee81a-18c1-4fb9-acb2-19aecc553d53)
 	
 	
-While the use of agile methodologies was useful in staying on track with the project, on reflections some of the user stories should have been broken down into smaller user stories to make them more manageable.	
+While the use of agile methodologies was useful in staying on track with the project, on reflection some of the user stories should have been broken down into smaller user stories to make them more manageable.	
 
 #### Must Haves (Completed)
 - As a **user** I can **view available courses** so that **choose which course suits me best**.
@@ -238,7 +238,7 @@ Each user story was assigned tasks in order to complete it, these were set out a
 
 	Each link in the navbar will be highlighted if it represents the page that the user is on.
 
-	On smaller devices the navbar collapses into a burger icon but all features arer still available.
+	On smaller devices the navbar collapses into a burger icon but all features are still available.
 
 	![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/f01a132e-6c03-4f05-b0ee-bc441b862fa4)
 
@@ -249,7 +249,7 @@ Each user story was assigned tasks in order to complete it, these were set out a
 
 - #### Landing Page
 
-	The Landing page displays a description of the site and what it offers followed by a link to view our courses. There is also a pokertips signup form provided by [Mail Chimp](https://mailchimp.com/).
+	The Landing page displays a description of the site and what it offers followed by a link to view our courses. There is also a poker tips signup form provided by [Mail Chimp](https://mailchimp.com/).
 
 	![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/8ff66f51-57d3-4598-bad0-62a62db29f4c)
 
@@ -276,13 +276,13 @@ Each user story was assigned tasks in order to complete it, these were set out a
 	
 	![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/5a9cf234-d4dd-4b9c-b18e-c82b8a2020fd)
 	
-	Where the user is a site admin, buttons will also display the options to edit or delete the coourse:
+	Where the user is a site admin, buttons will also display the options to edit or delete the course:
 	
 	![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/f4dc26dd-f7ad-4cba-81db-9f8f6ed8280e)
 
 
 - #### Course Detail
-	The Course Detail page displays the content of each course taken from the COURSE Model. There is the name, brief description, a longer detailed description of the contents and links to the coaches for that course. There are also two buttons, one to return the other courses and one to purchase the course which when clicked automatically adds the course to the users cart and redirects the user to the cart page. A pop up message will also disply saying the course has been added to the cart.
+	The Course Detail page displays the content of each course taken from the COURSE Model. There is the name, brief description, a longer detailed description of the contents and links to the coaches for that course. There are also two buttons, one to return the other courses and one to purchase the course which when clicked automatically adds the course to the users cart and redirects the user to the cart page. A pop up message will also display saying the course has been added to the cart.
 	
 	![image](https://github.com/tomkelly111/Snap-Call-Coaching/assets/111172617/55406f04-c130-4151-bb5c-f96f3aab264a)
 
@@ -303,7 +303,7 @@ Each user story was assigned tasks in order to complete it, these were set out a
 	
 
 - #### Our Team
-	The Our Team page displays all of the coaches that are currently providing their servicves taken from the COACH Model. Each post displays the name and biography of the coach along with a profile picture and a list of their accolades. The courses they are coaching on are also linked. New coaches can be added by site admins via the admin panel.
+	The Our Team page displays all of the coaches that are currently providing their services taken from the COACH Model. Each post displays the name and biography of the coach along with a profile picture and a list of their accolades. The courses they are coaching on are also linked. New coaches can be added by site admins via the admin panel.
 	
 	![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/3ee3bbb5-7247-4ffb-9101-df611b48c982)
 	
@@ -336,7 +336,7 @@ Each user story was assigned tasks in order to complete it, these were set out a
 	![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/fd9dec23-f59a-4bb9-a313-676331354587)
 
 - #### Register
-	Users who wish to register can do so by clicking the link in the navbar or on the dropdown menu of the My Account icon. Once they do so they are taken to the Sign Up page where they are asked to register their details. Once submitted, the user is prompted to check their email for a verification email where they can click a link to confimr this is a valid email address.
+	Users who wish to register can do so by clicking the link in the navbar or on the dropdown menu of the My Account icon. Once they do so they are taken to the Sign Up page where they are asked to register their details. Once submitted, the user is prompted to check their email for a verification email where they can click a link to confirm this is a valid email address.
 	
 	![image](https://github.com/tomkelly111/trialworkspace/assets/111172617/9cf1f33b-1b63-4304-8642-abea0286b8d3)
 	
@@ -750,6 +750,8 @@ os.environ["AWS_SECRET_ACCESS_KEY"] = "*****"
 - All photographs were provided by [Pexels](https://www.pexels.com/)
 - Instruction on how to make navbar links "active" was provided by Will Howell on [Stack Overflow](https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar#:~:text=You%20can%20get%20the%20name,class%20if%20the%20url%20matches.&text=I%20had%20a%20simialr%20question,be%20populated%20by%20each%20page)
 - Instruction on adding the logo was provided by user Dragosct on [Github](https://github.com/creativetimofficial/material-kit/issues/107)
+- Instruction on adding login for unit testing was provided by user Dolphus33 on [Stack Overflow](https://stackoverflow.com/questions/36940384/how-do-i-setup-a-unit-test-user-for-django-app-the-unit-test-cant-login)
+- Instruction on superuser login for unit testing was provided by user Sam Dolan on [Stack Overflow](https://stackoverflow.com/questions/3495114/how-to-create-admin-user-in-django-tests-py)
 
 Thanks to:
 - Code Institute for providing the Gitpod template.
